@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/Quantyx.png";
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img src="/src/Quantyx.png" alt="Quantix Global - Medico-Legal Experts" className="h-12 object-contain" />
+            <img src={logo} alt="Quantix Global - Medico-Legal Experts" className="h-12 object-contain" />
           </Link>
 
           {/* Navigation */}
