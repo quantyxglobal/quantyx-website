@@ -4,6 +4,13 @@ frontend:
     preBuild:
       commands:
         - npm ci
+        - echo "VITE_DASHBOARD_URL=$VITE_DASHBOARD_URL" >> .env
+        - echo "VITE_AWS_ACCESS_KEY_ID=$VITE_AWS_ACCESS_KEY_ID" >> .env
+        - echo "VITE_AWS_SECRET_ACCESS_KEY=$VITE_AWS_SECRET_ACCESS_KEY" >> .env
+        - echo "VITE_AWS_REGION=$VITE_AWS_REGION" >> .env
+        - echo "VITE_AWS_S3_BUCKET_NAME=$VITE_AWS_S3_BUCKET_NAME" >> .env
+        - echo "VITE_POSTMARK_SERVER_TOKEN=$VITE_POSTMARK_SERVER_TOKEN" >> .env
+        - echo "VITE_SUPPORT_EMAIL=$VITE_SUPPORT_EMAIL" >> .env
     build:
       commands:
         - npm run build
