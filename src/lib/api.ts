@@ -87,15 +87,8 @@ export const submitContactForm = async (formData: ContactFormData): Promise<ApiR
     const result = await response.json();
     console.log('Dashboard API success:', result);
 
-    // Send email notifications using Postmark
-    console.log('Sending email notifications...');
-    const emailResult = await EmailService.sendContactEmail(formData, uploadResults);
-    if (!emailResult.success) {
-      console.warn('Email notification failed:', emailResult.error);
-      // Don't fail the entire submission if email fails
-    } else {
-      console.log('Email notifications sent successfully');
-    }
+    // Email notifications are handled by the dashboard API
+    // No need to send emails from the website
 
     return {
       success: true,
@@ -189,15 +182,8 @@ export const submitQuoteForm = async (formData: QuoteFormData): Promise<ApiRespo
     const result = await response.json();
     console.log('Dashboard API success:', result);
 
-    // Send email notifications using Postmark
-    console.log('Sending email notifications...');
-    const emailResult = await EmailService.sendQuoteEmail(formData, uploadResults);
-    if (!emailResult.success) {
-      console.warn('Email notification failed:', emailResult.error);
-      // Don't fail the entire submission if email fails
-    } else {
-      console.log('Email notifications sent successfully');
-    }
+    // Email notifications are handled by the dashboard API
+    // No need to send emails from the website
 
     return {
       success: true,
