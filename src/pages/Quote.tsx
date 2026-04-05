@@ -36,11 +36,17 @@ const Quote = () => {
     { id: "life-care-plan", name: "Life Care Plan" },
     { id: "medical-opinion", name: "Medical Opinion" },
     { id: "medical-expenses", name: "Medical Expenses Summary" },
+    { id: "deposition-transcript", name: "Deposition Transcript" },
+    { id: "med-a-word", name: "Med-A-Word" },
+    { id: "pressure-ulcer-matrix", name: "Pressure Ulcer Matrix" },
+    { id: "pain-suffering-chart", name: "Pain and Suffering and Pain Medication Chart" },
+    { id: "medical-illustration", name: "Medical Illustration" },
+    { id: "graphical-timeline", name: "Graphical Timeline Summary" },
+    { id: "comparison-chart", name: "Comparison Chart" },
+    { id: "case-facts-opinion", name: "Case Facts & Opinion" },
     { id: "hyperlinks", name: "Hyperlinks" },
     { id: "bookmarks", name: "Bookmarks" },
-    { id: "med-a-word", name: "Med-A-Word" },
-    { id: "deposition-prep", name: "Deposition Preparation" },
-    { id: "lcp-support", name: "Life Care Plans (LCP) Support" },
+    { id: "mass-tort-review", name: "Mass-Tort Case Review" },
   ];
 
   const handleServiceChange = (serviceId: string, checked: boolean) => {
