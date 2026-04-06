@@ -25,7 +25,7 @@ export interface ContactFormData {
   company: string;
   services: string[];
   message: string;
-  files: File[];
+  files?: File[];
 }
 
 export interface QuoteFormData {

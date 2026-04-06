@@ -22,7 +22,7 @@ export const submitContactForm = async (formData: ContactFormData): Promise<ApiR
       phone: formData.phone,
       company: formData.company,
       services: formData.services,
-      fileCount: formData.files.length
+      fileCount: formData.files?.length || 0
     });
 
     // Validate required fields - company is now required, message is optional
@@ -32,7 +32,7 @@ export const submitContactForm = async (formData: ContactFormData): Promise<ApiR
 
     // Upload files to S3 if any are provided
     const uploadResults = [];
-    if (formData.files.length > 0) {
+    if (formData.files && formData.files.length > 0) {
       console.log('Starting file uploads to S3...');
       for (let i = 0; i < formData.files.length; i++) {
         const file = formData.files[i];
