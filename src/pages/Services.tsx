@@ -302,10 +302,10 @@ const HyperlinksAnimation = () => {
 const BookmarksAnimation = () => {
   const [expandedSection, setExpandedSection] = useState(0);
   const sections = [
-    { title: "Patient Information", pages: 3 },
-    { title: "Medical History", pages: 8 },
-    { title: "Treatment Records", pages: 15 },
-    { title: "Lab Results", pages: 6 }
+    { title: "Office visit", pages: 3 },
+    { title: "MRI", pages: 8 },
+    { title: "ER record", pages: 15 },
+    { title: "Lab results", pages: 6 }
   ];
 
   useEffect(() => {
