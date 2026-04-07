@@ -241,18 +241,12 @@ const OurProcess = () => {
               Get started with your case today and see how our streamlined process
               delivers exceptional results.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <a
                 href="/quote"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-colors duration-200"
               >
                 Get Quote
-              </a>
-              <a
-                href="/consultation"
-                className="inline-flex items-center justify-center px-6 py-3 border border-slate-300 text-slate-700 font-medium rounded-lg hover:bg-slate-50 transition-colors duration-200"
-              >
-                Schedule Consultation
               </a>
             </div>
           </div>

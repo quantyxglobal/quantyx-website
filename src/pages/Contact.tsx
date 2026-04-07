@@ -353,7 +353,11 @@ const Contact = () => {
                         <div>
                           <h3 className="font-semibold text-lg mb-1">Phone</h3>
                           <p className="text-muted-foreground">Call us for immediate assistance</p>
-                          <p className="text-primary font-semibold mt-2">+91 70751 84488</p>
+                          <div className="mt-2 space-y-1">
+                            <p className="text-primary font-semibold">+91 70751 84488 <span className="text-xs text-muted-foreground font-normal">(India)</span></p>
+                            <p className="text-primary font-semibold">+61 452 257 129 <span className="text-xs text-muted-foreground font-normal">(Australia)</span></p>
+                            <p className="text-primary font-semibold">+1 (512) 931-4563 <span className="text-xs text-muted-foreground font-normal">(USA)</span></p>
+                          </div>
                         </div>
                       </div>
                     </CardContent>
