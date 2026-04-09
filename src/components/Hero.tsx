@@ -9,12 +9,6 @@ const Hero = () => {
 
   const heroSlides = [
     {
-      badge: "Exclusive Offer for Law Firms",
-      title: "Your First Medical Records",
-      subtitle: "Review — On Us",
-      description: "Upload your first case and we'll review it absolutely free - up to 500 pages. Organized timelines, key diagnoses, and litigation-ready summaries — delivered with precision."
-    },
-    {
       badge: "Trusted Medical-Legal Expertise",
       title: "Expert Medico-Legal",
       subtitle: "Summaries",
@@ -71,7 +65,7 @@ const Hero = () => {
         >
           {/* Badge with animation */}
           <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-primary/20 rounded-full px-6 py-3 mb-8 shadow-lg transition-all duration-500" style={{ boxShadow: 'var(--shadow-elegant)' }}>
-            {currentSlide === 4 ? (
+            {currentSlide === 3 ? (
               <Calculator className="w-4 h-4 text-primary" />
             ) : (
               <Shield className="w-4 h-4 text-primary" />
@@ -123,7 +117,7 @@ const Hero = () => {
 
           {/* CTA Buttons - Dynamic based on current slide */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            {currentSlide === 4 ? (
+            {currentSlide === 3 ? (
               // Instant Quote slide buttons
               <>
                 <Link to="/quote">
@@ -137,21 +131,6 @@ const Hero = () => {
                     View Our Services
                   </Button>
                 </Link>
-              </>
-            ) : currentSlide === 0 ? (
-              // Free Review slide buttons (now first slide)
-              <>
-                <a href="https://dashboard.quantyxg.com/register" target="_blank" rel="noopener noreferrer">
-                  <Button size="xl" variant="hero" className="shadow-2xl" style={{ boxShadow: 'var(--shadow-elegant)' }}>
-                    Claim Your Free Review
-                  </Button>
-                </a>
-                <div className="text-center">
-                  <p className="text-sm text-muted-foreground mt-2">
-                    <span className="font-semibold">No credit card.</span> No commitment.<br />
-                    <span className="font-semibold">Up to 500 pages free</span> • First case, zero cost
-                  </p>
-                </div>
               </>
             ) : (
               // Default buttons for other slides
