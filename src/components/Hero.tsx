@@ -141,7 +141,7 @@ const Hero = () => {
             ) : currentSlide === 0 ? (
               // Free Review slide buttons (now first slide)
               <>
-                <a href="https://main.d3tgss74d264vy.amplifyapp.com/register" target="_blank" rel="noopener noreferrer">
+                <a href="https://dashboard.quantyxg.com/register" target="_blank" rel="noopener noreferrer">
                   <Button size="xl" variant="hero" className="shadow-2xl" style={{ boxShadow: 'var(--shadow-elegant)' }}>
                     Claim Your Free Review
                   </Button>
