@@ -78,7 +78,7 @@ export const whyChooseItems: WhyChooseItem[] = [
 ];
 
 export const defaultContent: DefaultContent = {
-  title: 'Why Choose Quantix?',
+  title: 'Why Choose Quantyx?',
   description: 'A unique blend of efficiency, professionalism, AI-driven accuracy, compliance, and unwavering client focus. Hover over each panel to learn more about our core strengths.',
   cta: 'Get Started'
 };

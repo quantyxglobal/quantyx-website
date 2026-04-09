@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
                 <div>
                   <h2 className="text-2xl font-bold text-foreground mb-4">Introduction</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Quantix Global ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our medico-legal services and visit our website.
+                    Quantyx Global ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our medico-legal services and visit our website.
                   </p>
                 </div>
 
@@ -104,7 +104,7 @@ const PrivacyPolicy = () => {
                     If you have questions or concerns about this Privacy Policy or our data practices, please contact us at:
                   </p>
                   <p className="text-muted-foreground leading-relaxed mt-4">
-                    Email: privacy@quantixglobal.com<br />
+                    Email: privacy@quantyxg.com<br />
                     Phone: +1 (555) 123-4567<br />
                     Address: 123 Medical Plaza, Suite 456
                   </p>

@@ -13,7 +13,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center" onClick={() => setMobileMenuOpen(false)}>
-            <img src={logo} alt="Quantix Global - Medico-Legal Experts" className="h-12 object-contain" />
+            <img src={logo} alt="Quantyx Global - Medico-Legal Experts" className="h-12 object-contain" />
           </Link>
 
           {/* Navigation */}

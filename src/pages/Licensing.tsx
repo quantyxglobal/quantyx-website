@@ -32,7 +32,7 @@ const Licensing = () => {
                 <div>
                   <h2 className="text-2xl font-bold text-foreground mb-4">Professional Credentials</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Quantix Global maintains the highest standards of professional credentialing. Our team consists of licensed medical professionals, certified legal nurse consultants, and experienced medico-legal specialists who bring extensive expertise to every case.
+                    Quantyx Global maintains the highest standards of professional credentialing. Our team consists of licensed medical professionals, certified legal nurse consultants, and experienced medico-legal specialists who bring extensive expertise to every case.
                   </p>
                 </div>
 
@@ -95,7 +95,7 @@ const Licensing = () => {
                 <div>
                   <h2 className="text-2xl font-bold text-foreground mb-4">Insurance and Bonding</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Quantix Global maintains comprehensive professional liability insurance and appropriate business insurance coverage to protect our clients and our practice.
+                    Quantyx Global maintains comprehensive professional liability insurance and appropriate business insurance coverage to protect our clients and our practice.
                   </p>
                 </div>
 
@@ -112,7 +112,7 @@ const Licensing = () => {
                     We welcome verification of our credentials and qualifications. For credential verification requests or questions about our licensing, please contact us at:
                   </p>
                   <p className="text-muted-foreground leading-relaxed mt-4">
-                    Email: credentials@quantixglobal.com<br />
+                    Email: credentials@quantyxg.com<br />
                     Phone: +1 (555) 123-4567<br />
                     Address: 123 Medical Plaza, Suite 456
                   </p>

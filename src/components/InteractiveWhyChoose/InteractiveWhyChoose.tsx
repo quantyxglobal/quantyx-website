@@ -224,7 +224,7 @@ const InteractiveWhyChoose: React.FC<InteractiveWhyChooseProps> = ({ className =
             ref={gridRef}
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 order-1 lg:order-2"
             role="grid"
-            aria-label="Quantix features and benefits"
+            aria-label="Quantyx features and benefits"
             aria-describedby="grid-instructions"
             style={{
               // Grid container containment and optimization

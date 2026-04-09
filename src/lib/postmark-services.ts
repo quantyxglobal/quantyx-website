@@ -1,4 +1,4 @@
-// Postmark Email Services for Quantix Global Website
+// Postmark Email Services for Quantyx Global Website
 // Integrated with dashboard configuration
 
 import * as postmark from 'postmark';
@@ -85,7 +85,7 @@ export class EmailService {
           ${fileListHtml}
           <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
           <p style="color: #666; font-size: 12px;">
-            This message was sent from the Quantix Global website contact form.<br>
+            This message was sent from the Quantyx Global website contact form.<br>
             Submitted at: ${new Date().toLocaleString()}
           </p>
         </div>
@@ -119,7 +119,7 @@ Submitted at: ${new Date().toLocaleString()}
       // Confirmation email to user
       const userEmailHtml = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #262083;">Thank you for contacting Quantix Global!</h2>
+          <h2 style="color: #262083;">Thank you for contacting Quantyx Global!</h2>
           <p>Dear ${firstName},</p>
           <p>We have received your message and will get back to you within 24 hours.</p>
           <p>Our team of medical-legal experts will review your inquiry and provide you with the information you need.</p>
@@ -134,18 +134,18 @@ Submitted at: ${new Date().toLocaleString()}
           <p>If you have any urgent questions, please don't hesitate to call us at +91 70751 84488.</p>
           
           <p>Best regards,<br>
-          The Quantix Global Team</p>
+          The Quantyx Global Team</p>
           
           <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
           <p style="color: #666; font-size: 12px;">
-            This is an automated confirmation email from Quantix Global.<br>
+            This is an automated confirmation email from Quantyx Global.<br>
             Please do not reply directly to this email.
           </p>
         </div>
       `;
 
       const userTextBody = `
-Thank you for contacting Quantix Global!
+Thank you for contacting Quantyx Global!
 
 Dear ${firstName},
 
@@ -158,13 +158,13 @@ ${uploadedFiles.length > 0 ? `- Documents Uploaded: ${uploadedFiles.length} file
 If you have any urgent questions, please call us at +91 70751 84488.
 
 Best regards,
-The Quantix Global Team
+The Quantyx Global Team
       `.trim();
 
       await postmarkClient.sendEmail({
         From: SUPPORT_EMAIL,
         To: email,
-        Subject: 'Thank you for contacting Quantix Global',
+        Subject: 'Thank you for contacting Quantyx Global',
         HtmlBody: userEmailHtml,
         TextBody: userTextBody,
         MessageStream: 'outbound'
@@ -229,7 +229,7 @@ The Quantix Global Team
           
           <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
           <p style="color: #666; font-size: 12px;">
-            This quote request was submitted through the Quantix Global website.<br>
+            This quote request was submitted through the Quantyx Global website.<br>
             Submitted at: ${new Date().toLocaleString()}
           </p>
         </div>
@@ -287,11 +287,11 @@ Submitted at: ${new Date().toLocaleString()}
           <p>If you have any questions or need to provide additional information, please don't hesitate to contact us at ${SUPPORT_EMAIL} or call +91 70751 84488.</p>
           
           <p>Best regards,<br>
-          The Quantix Global Team</p>
+          The Quantyx Global Team</p>
           
           <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
           <p style="color: #666; font-size: 12px;">
-            This is an automated confirmation email from Quantix Global.<br>
+            This is an automated confirmation email from Quantyx Global.<br>
             Please do not reply directly to this email.
           </p>
         </div>
@@ -317,13 +317,13 @@ Your submission summary:
 If you have any questions, please contact us at ${SUPPORT_EMAIL} or call +91 70751 84488.
 
 Best regards,
-The Quantix Global Team
+The Quantyx Global Team
       `.trim();
 
       await postmarkClient.sendEmail({
         From: SUPPORT_EMAIL,
         To: email,
-        Subject: 'Quote Request Received - Quantix Global',
+        Subject: 'Quote Request Received - Quantyx Global',
         HtmlBody: userEmailHtml,
         TextBody: userTextBody,
         MessageStream: 'outbound'

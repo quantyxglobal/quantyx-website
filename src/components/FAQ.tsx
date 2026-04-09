@@ -8,7 +8,7 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "What makes Quantix Global different from traditional medico-legal services?",
+      question: "What makes Quantyx Global different from traditional medico-legal services?",
       answer: "We combine AI-powered technology with expert medical and legal knowledge to deliver faster, more accurate, and comprehensive medico-legal services. Our platform can process complex medical records in a fraction of the time while maintaining the highest standards of accuracy."
     },
     {

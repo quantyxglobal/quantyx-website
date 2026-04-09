@@ -74,7 +74,7 @@ const Contact = () => {
     {
       icon: <Mail className="w-5 h-5" />,
       title: "Email",
-      content: "info@quantixglobal.com",
+      content: "contact@quantyxg.com",
       subtitle: "Response within 2 hours"
     },
     {

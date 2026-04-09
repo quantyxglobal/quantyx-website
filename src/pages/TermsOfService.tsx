@@ -32,14 +32,14 @@ const TermsOfService = () => {
                 <div>
                   <h2 className="text-2xl font-bold text-foreground mb-4">Agreement to Terms</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    By accessing or using Quantix Global's services, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access our services.
+                    By accessing or using Quantyx Global's services, you agree to be bound by these Terms of Service. If you disagree with any part of these terms, you may not access our services.
                   </p>
                 </div>
 
                 <div>
                   <h2 className="text-2xl font-bold text-foreground mb-4">Services Description</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    Quantix Global provides professional medico-legal services including medical chronologies, narrative summaries, demand letters, medical opinions, and related documentation services for legal professionals and their clients.
+                    Quantyx Global provides professional medico-legal services including medical chronologies, narrative summaries, demand letters, medical opinions, and related documentation services for legal professionals and their clients.
                   </p>
                 </div>
 
@@ -67,7 +67,7 @@ const TermsOfService = () => {
                 <div>
                   <h2 className="text-2xl font-bold text-foreground mb-4">Intellectual Property</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    All reports, analyses, and work products created by Quantix Global remain our intellectual property until full payment is received. Upon payment, clients receive a license to use the work product for the specific case or matter for which it was commissioned.
+                    All reports, analyses, and work products created by Quantyx Global remain our intellectual property until full payment is received. Upon payment, clients receive a license to use the work product for the specific case or matter for which it was commissioned.
                   </p>
                 </div>
 
@@ -112,7 +112,7 @@ const TermsOfService = () => {
                     For questions about these Terms of Service, please contact us at:
                   </p>
                   <p className="text-muted-foreground leading-relaxed mt-4">
-                    Email: legal@quantixglobal.com<br />
+                    Email: legal@quantyxg.com<br />
                     Phone: +1 (555) 123-4567<br />
                     Address: 123 Medical Plaza, Suite 456
                   </p>

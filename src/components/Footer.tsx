@@ -39,11 +39,11 @@ const Footer = () => {
               <Link
                 to="/"
                 className="inline-block group transition-all duration-300 hover:scale-105"
-                aria-label="Quantix Global - Return to Home"
+                aria-label="Quantyx Global - Return to Home"
               >
                 <img 
                   src={QuantyxLogo} 
-                  alt="Quantix Global - Medico-Legal Experts" 
+                  alt="Quantyx Global - Medico-Legal Experts" 
                   className="w-48 h-auto group-hover:opacity-90 transition-opacity duration-300 filter brightness-0 invert group-hover:drop-shadow-lg"
                 />
               </Link>
@@ -63,7 +63,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
                 <Mail className="w-5 h-5" />
-                <span className="text-base">info@quantixglobal.com</span>
+                <span className="text-base">contact@quantyxg.com</span>
               </div>
               <div className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
                 <MapPin className="w-5 h-5" />
@@ -147,7 +147,7 @@ const Footer = () => {
 
         <div className="border-t border-white/20 pt-8 text-center">
           <p className="text-white/70 text-base">
-            © 2026 Quantix Global. All rights reserved. AI-powered medico-legal expertise.
+            © 2026 Quantyx Global. All rights reserved. AI-powered medico-legal expertise.
           </p>
         </div>
       </div>

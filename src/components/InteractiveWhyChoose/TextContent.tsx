@@ -39,7 +39,7 @@ const TextContent: React.FC<TextContentProps> = memo(({
       <div className="pt-4">
         <button 
           className="bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200 w-fit shadow-md hover:shadow-lg transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300 focus:ring-opacity-50"
-          aria-label={`${cta} - Learn more about Quantix services`}
+          aria-label={`${cta} - Learn more about Quantyx services`}
           type="button"
           style={{
             // Button containment and optimization

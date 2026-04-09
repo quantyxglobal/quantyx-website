@@ -32,7 +32,7 @@ const ProfessionalEthics = () => {
                 <div>
                   <h2 className="text-2xl font-bold text-foreground mb-4">Our Ethical Foundation</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    At Quantix Global, we are committed to the highest standards of professional ethics in all aspects of our medico-legal services. Our ethical framework guides every decision we make and every service we provide.
+                    At Quantyx Global, we are committed to the highest standards of professional ethics in all aspects of our medico-legal services. Our ethical framework guides every decision we make and every service we provide.
                   </p>
                 </div>
 
@@ -111,7 +111,7 @@ const ProfessionalEthics = () => {
                     If you have concerns about ethical issues related to our services, please contact us at:
                   </p>
                   <p className="text-muted-foreground leading-relaxed mt-4">
-                    Email: ethics@quantixglobal.com<br />
+                    Email: ethics@quantyxg.com<br />
                     Phone: +1 (555) 123-4567<br />
                     Address: 123 Medical Plaza, Suite 456
                   </p>
