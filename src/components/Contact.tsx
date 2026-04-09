@@ -75,7 +75,7 @@ const Contact = () => {
       icon: <Mail className="w-5 h-5" />,
       title: "Email",
       content: "contact@quantyxg.com",
-      subtitle: "Response within 2 hours"
+      subtitle: "Response at the earliest"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
