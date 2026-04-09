@@ -23,6 +23,7 @@ export interface ContactFormData {
   email: string;
   phone: string;
   company: string;
+  country: string;
   services: string[];
   message: string;
   files?: File[];
@@ -33,6 +34,7 @@ export interface QuoteFormData {
   email: string;
   phone: string;
   firmName: string;
+  country: string;
   caseDetails: string;
   services: string[];
   files: File[];

@@ -17,6 +17,7 @@ const Contact = () => {
     email: "",
     phone: "",
     company: "",
+    country: "",
     message: ""
   });
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
@@ -69,8 +70,8 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validation - company is now required, message is optional
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.company) {
+    // Validation - company and country are required, message is optional
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.company || !formData.country) {
       setError("Please fill in all required fields");
       return;
     }
@@ -96,6 +97,7 @@ const Contact = () => {
           email: "",
           phone: "",
           company: "",
+          country: "",
           message: ""
         });
         setSelectedServices([]);
@@ -231,6 +233,25 @@ const Contact = () => {
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         required
                       />
+                    </div>
+                    
+                    <div className="space-y-2">
+                      <Label htmlFor="country">Country *</Label>
+                      <select
+                        id="country"
+                        value={formData.country}
+                        onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                        required
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      >
+                        <option value="">Select a country</option>
+                        <option value="United States">United States</option>
+                        <option value="Canada">Canada</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Australia">Australia</option>
+                        <option value="India">India</option>
+                        <option value="Other">Other</option>
+                      </select>
                     </div>
                     
                     <div className="space-y-2">
