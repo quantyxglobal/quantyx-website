@@ -106,7 +106,7 @@ const Contact = () => {
           {/* Contact Form */}
           <Card className="shadow-2xl border-primary/20 bg-card/80 backdrop-blur-sm" style={{ boxShadow: 'var(--shadow-elegant)' }}>
             <CardHeader>
-              <CardTitle className="text-2xl">Schedule a Consultation</CardTitle>
+              <CardTitle className="text-2xl">Contact Us</CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <form onSubmit={handleSubmit} className="space-y-6">

@@ -99,7 +99,7 @@ const Services = () => {
         
         <div className="text-center mt-16">
           <Button variant="professional" size="xl">
-            Schedule a Consultation
+            Contact Us
           </Button>
         </div>
       </div>

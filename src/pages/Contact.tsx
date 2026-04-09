@@ -70,9 +70,14 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validation - company and country are required, message is optional
+    // Validation - company, country, and files are required, message is optional
     if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.company || !formData.country) {
       setError("Please fill in all required fields");
+      return;
+    }
+
+    if (uploadedFiles.length === 0) {
+      setError("Please upload at least one document");
       return;
     }
 
@@ -153,7 +158,7 @@ const Contact = () => {
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
-                  Contact Us
+                  Upload Your Case
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
@@ -170,7 +175,7 @@ const Contact = () => {
               {/* Contact Form */}
               <Card className="border-primary/20 bg-card/80 backdrop-blur-sm shadow-xl">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Send Us a Message</CardTitle>
+                  <CardTitle className="text-2xl">Case Upload</CardTitle>
                   <CardDescription>
                     Fill out the form below and we'll get back to you within 24 hours.
                   </CardDescription>
@@ -273,7 +278,7 @@ const Contact = () => {
                     </div>
                     
                     <div className="space-y-2">
-                      <Label htmlFor="message">Message</Label>
+                      <Label htmlFor="message">Client Specific Instructions</Label>
                       <Textarea 
                         id="message" 
                         placeholder="Please describe your case and specific needs..."
@@ -285,7 +290,7 @@ const Contact = () => {
 
                     {/* File Upload Section */}
                     <div className="space-y-2">
-                      <Label>Upload Documents (Optional)</Label>
+                      <Label>Upload Documents *</Label>
                       <div
                         className="border-2 border-dashed border-muted-foreground/25 rounded-lg p-6 text-center hover:border-primary/50 transition-colors cursor-pointer"
                         onClick={() => document.getElementById('contact-file-upload')?.click()}
@@ -303,6 +308,7 @@ const Contact = () => {
                           multiple
                           className="hidden"
                           onChange={handleFileUpload}
+                          required
                         />
                       </div>
 
