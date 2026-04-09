@@ -22,7 +22,7 @@ const Header = () => {
             <Link to="/services" className="text-foreground/80 hover:text-primary transition-all font-medium">Services</Link>
             <Link to="/ai-best-practices" className="text-foreground/80 hover:text-primary transition-all font-medium">Our AI Approach</Link>
             <Link to="/about" className="text-foreground/80 hover:text-primary transition-all font-medium">About</Link>
-            <Link to="/contact" className="text-foreground/80 hover:text-primary transition-all font-medium">Contact</Link>
+            <Link to="/contact" className="text-foreground/80 hover:text-primary transition-all font-medium">Case Upload</Link>
           </nav>
 
           {/* CTA Buttons */}
@@ -88,7 +88,7 @@ const Header = () => {
                 className="text-foreground/80 hover:text-primary transition-all font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Contact
+                Case Upload
               </Link>
               <a 
                 href={import.meta.env.VITE_DASHBOARD_URL || 'http://localhost:3000/login'}
