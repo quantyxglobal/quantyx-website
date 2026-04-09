@@ -21,12 +21,13 @@ export const submitContactForm = async (formData: ContactFormData): Promise<ApiR
       email: formData.email,
       phone: formData.phone,
       company: formData.company,
+      country: formData.country,
       services: formData.services,
       fileCount: formData.files?.length || 0
     });
 
-    // Validate required fields - company is now required, message is optional
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.company) {
+    // Validate required fields - company and country are required, message is optional
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.company || !formData.country) {
       throw new Error('Please fill in all required fields');
     }
 
@@ -70,6 +71,7 @@ export const submitContactForm = async (formData: ContactFormData): Promise<ApiR
         email: formData.email,
         phone: formData.phone,
         company: formData.company,
+        country: formData.country,
         services: formData.services,
         message: formData.message,
         uploadedFiles: uploadResults
@@ -112,12 +114,13 @@ export const submitQuoteForm = async (formData: QuoteFormData): Promise<ApiRespo
       email: formData.email,
       phone: formData.phone,
       firmName: formData.firmName,
+      country: formData.country,
       services: formData.services,
       fileCount: formData.files.length
     });
 
     // Validate required fields
-    if (!formData.fullName || !formData.email || !formData.phone) {
+    if (!formData.fullName || !formData.email || !formData.phone || !formData.country) {
       throw new Error('Please fill in all required fields');
     }
 
@@ -165,6 +168,7 @@ export const submitQuoteForm = async (formData: QuoteFormData): Promise<ApiRespo
         email: formData.email,
         phone: formData.phone,
         firmName: formData.firmName,
+        country: formData.country,
         caseDetails: formData.caseDetails,
         services: formData.services,
         uploadedFiles: uploadResults
