@@ -67,50 +67,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">
                 <MapPin className="w-5 h-5" />
-                <span className="text-base">#204, B Block, Old Grand World Road, Smart City Tirupati, Andhra Pradesh</span>
-              </div>
-            </div>
-            
-            {/* Social Media Links */}
-            <div className="mt-6">
-              <h5 className="font-semibold text-white mb-4 text-base">Connect With Us</h5>
-              <div className="flex gap-4">
-                <a
-                  href="https://www.instagram.com/quantyx_global"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
-                  aria-label="Follow us on Instagram"
-                >
-                  <Instagram className="w-5 h-5 text-white" />
-                </a>
-                <a
-                  href="https://x.com/Quantyx_Global"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
-                  aria-label="Follow us on Twitter"
-                >
-                  <Twitter className="w-5 h-5 text-white" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/quantyx-global-med-legal-solutions-pvt-ltd/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
-                  aria-label="Connect with us on LinkedIn"
-                >
-                  <Linkedin className="w-5 h-5 text-white" />
-                </a>
-                <a
-                  href="https://wa.me/917075184488"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
-                  aria-label="Chat with us on WhatsApp"
-                >
-                  <MessageCircle className="w-5 h-5 text-white" />
-                </a>
+                <span className="text-base">#204, B Block, Old Grand World Road, Smart City Tirupati, Andhra Pradesh - 517501, India</span>
               </div>
             </div>
           </div>
