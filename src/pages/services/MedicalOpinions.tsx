@@ -232,7 +232,7 @@ const MedicalOpinions = () => {
                   Schedule Expert Consultation
                 </Button>
               </Link>
-              <Link to="/contact">
+              <Link to="/case-upload">
                 <Button variant="outline" size="xl">
                   Discuss Your Case
                 </Button>

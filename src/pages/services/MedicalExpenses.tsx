@@ -145,7 +145,7 @@ const MedicalExpenses = () => {
                   Schedule Consultation
                 </Button>
               </Link>
-              <Link to="/contact">
+              <Link to="/case-upload">
                 <Button variant="outline" size="xl">
                   Contact Us
                 </Button>

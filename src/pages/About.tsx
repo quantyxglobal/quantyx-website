@@ -208,7 +208,7 @@ const About = () => {
               Experience the difference that expert medical-legal services can make for your cases.
             </p>
             <div className="flex justify-center">
-              <Link to="/contact">
+              <Link to="/case-upload">
                 <Button variant="outline" size="xl">
                   Contact Our Team
                 </Button>

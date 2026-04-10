@@ -67,7 +67,8 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/case-upload" element={<Contact />} />
+            <Route path="/contact" element={<Contact />} /> {/* Redirect old URL */}
             <Route path="/quote" element={<Quote />} />
             <Route path="/services/medical-chronology" element={<MedicalChronology />} />
             <Route path="/services/medical-opinions" element={<MedicalOpinions />} />
