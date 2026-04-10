@@ -21,3 +21,21 @@ frontend:
   cache:
     paths:
       - node_modules/**/*
+  # SPA configuration for proper routing
+  customHeaders:
+    - pattern: '**/*'
+      headers:
+        - key: 'Cache-Control'
+          value: 'public, max-age=31536000, immutable'
+    - pattern: '/index.html'
+      headers:
+        - key: 'Cache-Control'
+          value: 'no-cache, no-store, must-revalidate'
+    - pattern: '/sitemap.xml'
+      headers:
+        - key: 'Cache-Control'
+          value: 'public, max-age=86400'
+    - pattern: '/robots.txt'
+      headers:
+        - key: 'Cache-Control'
+          value: 'public, max-age=86400'
