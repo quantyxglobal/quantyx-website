@@ -9,6 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Phone, Mail, MapPin, CheckCircle, AlertCircle, Upload } from "lucide-react";
 import { useState } from "react";
 import { submitContactForm, type ContactFormData } from "@/lib/api";
+import { SEO } from "@/components/SEO";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -146,6 +147,14 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Contact Quantyx Global | Get Expert Medico-Legal Support"
+        description="Contact Quantyx Global for professional medico-legal services. Upload your case files, request a quote, or speak with our expert team. Serving law firms worldwide with 24-48 hour turnaround."
+        keywords="contact quantyx global, medico-legal consultation, case upload, legal services quote, medical chronology request"
+        canonical="https://www.quantyxg.com/case-upload"
+        ogTitle="Contact Quantyx Global - Expert Medico-Legal Services"
+        ogDescription="Get in touch for professional medico-legal support. Fast turnaround, expert analysis, competitive pricing."
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

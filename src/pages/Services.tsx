@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { FileText, Stethoscope, Brain, Heart, Eye, Check, FileCheck, Link as LinkIcon, BookOpen, Activity, Users, TrendingUp, Calendar, Clock, ArrowRight } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 
 // Interactive Animation Components for each service
 const ChronologyAnimation = () => {
@@ -647,6 +648,14 @@ const Services = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Medico-Legal Services | Medical Chronology & Expert Analysis - Quantyx Global"
+        description="Comprehensive medico-legal services for law firms: medical chronologies, narrative summaries, demand letters, medical opinions, and expert document analysis. Professional support for personal injury cases."
+        keywords="medico-legal services, medical chronology, narrative summary, demand letter, medical opinion, life care plan, medical expenses, hyperlinks, bookmarks, deposition analysis"
+        canonical="https://www.quantyxg.com/services"
+        ogTitle="Professional Medico-Legal Services for Law Firms"
+        ogDescription="Expert medical chronologies, demand letters, and legal document analysis. Comprehensive support for personal injury and medical malpractice cases."
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

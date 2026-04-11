@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Users, Shield, Target, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 
 const About = () => {
   const values = [
@@ -49,6 +50,14 @@ const About = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="About Quantyx Global | Expert Medico-Legal Services Team"
+        description="Learn about Quantyx Global's mission to provide expert medico-legal services. Our team combines medical expertise with AI technology to deliver accurate, efficient legal support for law firms worldwide."
+        keywords="about quantyx global, medico-legal experts, medical legal team, AI legal services, law firm support"
+        canonical="https://www.quantyxg.com/about"
+        ogTitle="About Quantyx Global - Expert Medico-Legal Services"
+        ogDescription="Combining medical expertise with AI technology to deliver exceptional medico-legal services for law firms."
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

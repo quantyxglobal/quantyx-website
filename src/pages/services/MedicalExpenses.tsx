@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Brain, ArrowRight, Download, CheckCircle, DollarSign } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 
 const MedicalExpenses = () => {
   const features = [
@@ -19,6 +20,14 @@ const MedicalExpenses = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Medical Expenses Summary | Cost Analysis & Future Care Projections - Quantyx Global"
+        description="Comprehensive medical expenses analysis and summary for injury and malpractice claims. Expert cost analysis, future care projections, and economic impact assessment for legal proceedings."
+        keywords="medical expenses, medical cost analysis, future care costs, economic damages, life care planning, medical billing analysis, injury cost assessment"
+        canonical="https://www.quantyxg.com/services/medical-expenses"
+        ogTitle="Medical Expenses Summary Services for Legal Claims"
+        ogDescription="Detailed financial documentation supporting damages claims. Expert analysis of medical costs and future care projections."
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}

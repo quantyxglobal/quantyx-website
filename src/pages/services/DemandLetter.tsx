@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Heart, ArrowRight, Download, CheckCircle, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 
 const DemandLetter = () => {
     const features = [
@@ -19,6 +20,14 @@ const DemandLetter = () => {
 
     return (
         <div className="min-h-screen">
+            <SEO
+                title="Demand Letter Services | Professional Legal Drafting - Quantyx Global"
+                description="Professionally crafted demand letters that effectively communicate medical findings and damages. Expert medical support, compelling presentation, and legal compliance for insurance negotiations."
+                keywords="demand letter, legal demand letter, insurance demand, settlement demand, medical demand letter, personal injury demand, legal drafting"
+                canonical="https://www.quantyxg.com/services/demand-letter"
+                ogTitle="Professional Demand Letter Services for Personal Injury Cases"
+                ogDescription="Compelling demand letters backed by expert medical analysis. Strengthen your settlement negotiations."
+            />
             <Header />
             <main className="pt-20">
                 {/* Hero Section */}

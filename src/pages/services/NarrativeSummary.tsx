@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Stethoscope, ArrowRight, Download, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 
 const NarrativeSummary = () => {
   const features = [
@@ -19,6 +20,14 @@ const NarrativeSummary = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO
+        title="Medical Narrative Summary Services | Expert Medical Translation - Quantyx Global"
+        description="Professional medical narrative summaries that translate complex medical information into clear, understandable reports for legal proceedings. Expert interpretation and legal-ready formatting."
+        keywords="medical narrative summary, medical translation, medical report, legal medical documentation, medical case summary, expert medical interpretation"
+        canonical="https://www.quantyxg.com/services/narrative-summary"
+        ogTitle="Medical Narrative Summary Services for Legal Cases"
+        ogDescription="Clear, comprehensive medical narratives for legal proceedings. Expert translation of complex medical information."
+      />
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
