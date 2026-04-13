@@ -2,98 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.quantyxg.com/</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.quantyxg.com/about</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.quantyxg.com/services</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.quantyxg.com/services/medical-chronology</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.quantyxg.com/services/medical-opinions</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.quantyxg.com/services/narrative-summary</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.quantyxg.com/services/medical-expenses</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.quantyxg.com/services/demand-letter</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.quantyxg.com/services/hyperlinks-bookmarks</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.quantyxg.com/case-upload</loc>
-    <lastmod>2026-04-10</lastmod>
+    <loc>https://www.quantyxg.com/about</loc>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.quantyxg.com/quote</loc>
-    <lastmod>2026-04-10</lastmod>
+    <loc>https://www.quantyxg.com/contact</loc>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.quantyxg.com/privacy-policy</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.quantyxg.com/terms-of-service</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.quantyxg.com/professional-ethics</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.quantyxg.com/licensing</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://www.quantyxg.com/ai-best-practices</loc>
-    <lastmod>2026-04-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 </urlset>

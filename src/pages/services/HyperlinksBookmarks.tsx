@@ -24,9 +24,10 @@ const HyperlinksBookmarks = () => {
         title="Hyperlinks & Bookmarks | Digital Medical Record Navigation - Quantyx Global"
         description="Professional hyperlink and bookmark services for medical records. Digital navigation, quick reference linking, and organized document structure for efficient legal review and case preparation."
         keywords="medical record hyperlinks, digital bookmarks, medical document navigation, PDF hyperlinks, medical record organization, digital medical records"
-        canonical="https://www.quantyxg.com/services/hyperlinks-bookmarks"
+        canonical="https://www.quantyxg.com/services"
         ogTitle="Hyperlinks & Bookmarks for Medical Records"
         ogDescription="Efficient digital navigation for medical records. Quick reference linking and organized document structure."
+        noindex={true}
       />
       <Header />
       <main className="pt-20">

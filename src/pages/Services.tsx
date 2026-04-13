@@ -668,12 +668,41 @@ const Services = () => {
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl font-bold mb-4">
                 <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
-                  Our Services
+                  Professional Medico-Legal Services
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground mb-6 max-w-3xl mx-auto">
-                Comprehensive medico-legal services tailored to support your case with expert analysis and professional documentation.
+                Comprehensive medico-legal services tailored to support your case with expert analysis and professional documentation. From medical chronology services to detailed legal case analysis, we provide the expertise law firms need to win.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Introduction Section */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-6">Why Choose Our Medico-Legal Services?</h2>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                In complex personal injury and medical malpractice cases, the quality of your medico-legal support can make the difference between success and failure. Our comprehensive suite of services combines medical expertise with legal acumen to deliver the insights your cases demand. Whether you need detailed medical chronology services, expert medical opinions, or sophisticated legal case analysis, our team of experienced professionals is ready to support your litigation strategy.
+              </p>
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                We understand that every case is unique. That's why we offer customizable medico-legal summaries, narrative summaries, and demand letters that are tailored to your specific needs. Our AI-powered platform accelerates the analysis process while maintaining the human expertise that ensures accuracy and legal compliance.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div className="p-6 bg-primary/5 rounded-lg">
+                  <h3 className="font-semibold text-primary mb-2">Expert Analysis</h3>
+                  <p className="text-sm text-muted-foreground">Board-certified physicians and legal experts review every case with meticulous attention to detail.</p>
+                </div>
+                <div className="p-6 bg-primary/5 rounded-lg">
+                  <h3 className="font-semibold text-primary mb-2">Fast Turnaround</h3>
+                  <p className="text-sm text-muted-foreground">48-72 hour average turnaround time without compromising quality or accuracy.</p>
+                </div>
+                <div className="p-6 bg-primary/5 rounded-lg">
+                  <h3 className="font-semibold text-primary mb-2">Court-Ready</h3>
+                  <p className="text-sm text-muted-foreground">All deliverables are formatted for immediate use in legal proceedings and court presentations.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -809,7 +838,7 @@ const Services = () => {
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss your medico-legal needs and get a custom quote for your case.
+              Contact us today to discuss your medico-legal needs and get a custom quote for your case. Our expert team is ready to support your litigation strategy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/quote">
@@ -817,12 +846,15 @@ const Services = () => {
                   Get Instant Quote
                 </Button>
               </Link>
-              <Link to="/case-upload">
+              <Link to="/contact">
                 <Button variant="outline" size="lg">
                   Contact Us
                 </Button>
               </Link>
             </div>
+            <p className="text-muted-foreground mt-8">
+              <Link to="/" className="text-primary hover:underline">Return to homepage</Link> to learn more about our comprehensive medico-legal services.
+            </p>
           </div>
         </section>
       </main>

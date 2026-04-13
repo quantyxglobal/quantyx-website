@@ -51,9 +51,10 @@ const MedicalOpinions = () => {
         title="Medical Opinion Services | Expert Medical Analysis - Quantyx Global"
         description="Expert medical opinions and analysis from board-certified physicians for legal proceedings. Professional medical testimony, case evaluation, and standard of care assessment for medical malpractice and personal injury cases."
         keywords="medical opinion, expert medical opinion, medical expert witness, medical testimony, standard of care, causation analysis, medical malpractice expert"
-        canonical="https://www.quantyxg.com/services/medical-opinions"
+        canonical="https://www.quantyxg.com/services"
         ogTitle="Expert Medical Opinion Services for Legal Cases"
         ogDescription="Board-certified physicians providing expert medical opinions for legal proceedings. Professional analysis and testimony."
+        noindex={true}
       />
       <Header />
       <main className="pt-20">

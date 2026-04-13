@@ -65,9 +65,10 @@ const MedicalChronology = () => {
         title="Medical Chronology Services | Expert Medical Record Organization - Quantyx Global"
         description="Professional medical chronology services for personal injury cases. Transform complex medical records into clear, chronological timelines. Expert analysis, court-ready formatting, 24-48 hour turnaround."
         keywords="medical chronology, medical record organization, personal injury chronology, medical timeline, legal medical records, court-ready chronology, medical record review"
-        canonical="https://www.quantyxg.com/services/medical-chronology"
+        canonical="https://www.quantyxg.com/services"
         ogTitle="Medical Chronology Services for Personal Injury Cases"
         ogDescription="Expert medical chronologies that strengthen your personal injury cases. Clear timelines, professional analysis, fast turnaround."
+        noindex={true}
       />
       <Header />
       <main className="pt-20">
