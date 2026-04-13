@@ -606,8 +606,8 @@ const Services = () => {
       // Debounce scroll events for better performance
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
-        // Adjust scroll position to account for header and some buffer
-        const scrollPosition = window.scrollY + 250; // Increased from 200 to 250
+        // Use a smaller offset - just enough to clear the sticky header
+        const scrollPosition = window.scrollY + 150; // Reduced from 250 to 150
 
         // Check special services section first
         const specialElement = sectionsRef.current["special-additional-services"];
@@ -648,6 +648,8 @@ const Services = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
       clearTimeout(timeoutId);
+    };
+  }, []); // Remove services dependency to prevent re-running
     };
   }, []); // Remove services dependency to prevent re-running
 
