@@ -606,7 +606,8 @@ const Services = () => {
       // Debounce scroll events for better performance
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
-        const scrollPosition = window.scrollY + 200;
+        // Adjust scroll position to account for header and some buffer
+        const scrollPosition = window.scrollY + 250; // Increased from 200 to 250
 
         // Check special services section first
         const specialElement = sectionsRef.current["special-additional-services"];
@@ -618,18 +619,26 @@ const Services = () => {
           }
         }
 
-        // Then check regular services - iterate in reverse to prioritize sections lower on page
-        for (let i = services.length - 1; i >= 0; i--) {
+        // Check regular services - find the section that contains the scroll position
+        let foundSection = services[0].id; // Default to first section
+        
+        for (let i = 0; i < services.length; i++) {
           const service = services[i];
           const element = sectionsRef.current[service.id];
           if (element) {
             const { offsetTop } = element;
-            if (scrollPosition >= offsetTop) {
-              setActiveSection(service.id);
-              return;
+            const nextElement = i < services.length - 1 ? sectionsRef.current[services[i + 1].id] : null;
+            const nextOffsetTop = nextElement ? nextElement.offsetTop : Infinity;
+            
+            // Check if scroll position is within this section's range
+            if (scrollPosition >= offsetTop && scrollPosition < nextOffsetTop) {
+              foundSection = service.id;
+              break;
             }
           }
         }
+        
+        setActiveSection(foundSection);
       }, 50); // 50ms debounce
     };
 
