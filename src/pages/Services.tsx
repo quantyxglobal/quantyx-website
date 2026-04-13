@@ -650,8 +650,6 @@ const Services = () => {
       clearTimeout(timeoutId);
     };
   }, []); // Remove services dependency to prevent re-running
-    };
-  }, []); // Remove services dependency to prevent re-running
 
   const scrollToSection = (id: string) => {
     const element = sectionsRef.current[id];
