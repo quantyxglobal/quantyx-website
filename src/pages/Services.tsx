@@ -598,56 +598,43 @@ const Services = () => {
     { name: "Case Facts & Opinions", description: "A concise, objective summary of accident-related facts and medical opinions, highlighting mechanism of injury, diagnosis, treatment course, and causation." }
   ];
 
-  // Scroll spy effect
+  // Scroll spy effect using Intersection Observer for accurate detection
   useEffect(() => {
-    let timeoutId: NodeJS.Timeout;
-    
-    const handleScroll = () => {
-      // Debounce scroll events for better performance
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        // Use a fixed offset that accounts for the sticky header (80px) plus small buffer
-        const scrollPosition = window.scrollY + 100; // Header height + small buffer
-
-        // Check special services section first
-        const specialElement = sectionsRef.current["special-additional-services"];
-        if (specialElement) {
-          const { offsetTop, offsetHeight } = specialElement;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection("special-additional-services");
-            return;
-          }
-        }
-
-        // Check regular services - find the section that contains the scroll position
-        let foundSection = services[0].id; // Default to first section
-        
-        for (let i = 0; i < services.length; i++) {
-          const service = services[i];
-          const element = sectionsRef.current[service.id];
-          if (element) {
-            const { offsetTop } = element;
-            const nextElement = i < services.length - 1 ? sectionsRef.current[services[i + 1].id] : null;
-            const nextOffsetTop = nextElement ? nextElement.offsetTop : Infinity;
-            
-            // Check if scroll position is within this section's range
-            if (scrollPosition >= offsetTop && scrollPosition < nextOffsetTop) {
-              foundSection = service.id;
-              break;
-            }
-          }
-        }
-        
-        setActiveSection(foundSection);
-      }, 50); // 50ms debounce
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -70% 0px', // Trigger when section is in top 30% of viewport
+      threshold: 0
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          if (id) {
+            setActiveSection(id);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe all service sections
+    services.forEach((service) => {
+      const element = sectionsRef.current[service.id];
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    // Observe special services section
+    const specialElement = sectionsRef.current["special-additional-services"];
+    if (specialElement) {
+      observer.observe(specialElement);
+    }
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(timeoutId);
+      observer.disconnect();
     };
   }, []); // Remove services dependency to prevent re-running
 
