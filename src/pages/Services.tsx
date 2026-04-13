@@ -600,42 +600,52 @@ const Services = () => {
 
   // Scroll spy effect
   useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+    
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
+      // Debounce scroll events for better performance
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        const scrollPosition = window.scrollY + 200;
 
-      // Check special services section first
-      const specialElement = sectionsRef.current["special-additional-services"];
-      if (specialElement) {
-        const { offsetTop, offsetHeight } = specialElement;
-        if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-          setActiveSection("special-additional-services");
-          return;
-        }
-      }
-
-      // Then check regular services
-      for (const service of services) {
-        const element = sectionsRef.current[service.id];
-        if (element) {
-          const { offsetTop, offsetHeight } = element;
+        // Check special services section first
+        const specialElement = sectionsRef.current["special-additional-services"];
+        if (specialElement) {
+          const { offsetTop, offsetHeight } = specialElement;
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
-            setActiveSection(service.id);
-            break;
+            setActiveSection("special-additional-services");
+            return;
           }
         }
-      }
+
+        // Then check regular services - iterate in reverse to prioritize sections lower on page
+        for (let i = services.length - 1; i >= 0; i--) {
+          const service = services[i];
+          const element = sectionsRef.current[service.id];
+          if (element) {
+            const { offsetTop } = element;
+            if (scrollPosition >= offsetTop) {
+              setActiveSection(service.id);
+              return;
+            }
+          }
+        }
+      }, 50); // 50ms debounce
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [services]);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeoutId);
+    };
+  }, []); // Remove services dependency to prevent re-running
 
   const scrollToSection = (id: string) => {
     const element = sectionsRef.current[id];
     if (element) {
-      const offset = 120;
+      const offset = 140; // Increased offset to account for sticky header
       const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
       const offsetPosition = elementPosition - offset;
       
@@ -643,6 +653,9 @@ const Services = () => {
         top: offsetPosition,
         behavior: "smooth"
       });
+      
+      // Immediately update active section for better UX
+      setActiveSection(id);
     }
   };
 
