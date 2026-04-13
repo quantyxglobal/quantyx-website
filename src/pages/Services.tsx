@@ -606,8 +606,8 @@ const Services = () => {
       // Debounce scroll events for better performance
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
-        // Use a smaller offset - just enough to clear the sticky header
-        const scrollPosition = window.scrollY + 150; // Reduced from 250 to 150
+        // Use viewport center for more accurate detection
+        const scrollPosition = window.scrollY + (window.innerHeight / 3); // Use top third of viewport
 
         // Check special services section first
         const specialElement = sectionsRef.current["special-additional-services"];
