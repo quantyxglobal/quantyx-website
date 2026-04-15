@@ -94,13 +94,13 @@ const Footer = () => {
               <h5 className="font-semibold text-white mb-4 text-base">Connect With Us</h5>
               <div className="flex gap-4">
                 <a
-                  href="https://www.instagram.com/quantyx_global"
+                  href="https://www.linkedin.com/company/quantyx-global-med-legal-solutions-pvt-ltd/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
-                  aria-label="Follow us on Instagram"
+                  aria-label="Connect with us on LinkedIn"
                 >
-                  <Instagram className="w-5 h-5 text-white" />
+                  <Linkedin className="w-5 h-5 text-white" />
                 </a>
                 <a
                   href="https://x.com/Quantyx_Global"
@@ -112,13 +112,13 @@ const Footer = () => {
                   <Twitter className="w-5 h-5 text-white" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/quantyx-global-med-legal-solutions-pvt-ltd/"
+                  href="https://www.instagram.com/quantyx_global"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all duration-300 hover:scale-110"
-                  aria-label="Connect with us on LinkedIn"
+                  aria-label="Follow us on Instagram"
                 >
-                  <Linkedin className="w-5 h-5 text-white" />
+                  <Instagram className="w-5 h-5 text-white" />
                 </a>
                 <a
                   href="https://wa.me/917075184488"
@@ -141,17 +141,18 @@ const Footer = () => {
               <li><Link to="/terms-of-service" className="hover:text-white transition-colors text-base">Terms of Service</Link></li>
               <li><Link to="/professional-ethics" className="hover:text-white transition-colors text-base">Professional Ethics</Link></li>
               <li><Link to="/licensing" className="hover:text-white transition-colors text-base">Licensing</Link></li>
+              <li><Link to="/hipaa-pipeda-compliance" className="hover:text-white transition-colors text-base">HIPAA & PIPEDA</Link></li>
             </ul>
           </div>
         </div>
 
         {/* Trust & Technology Section */}
         <div className="border-t border-white/20 mt-16 pt-12 pb-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <p className="text-center text-white/60 text-sm mb-6 uppercase tracking-wider">
               Powered by Enterprise-Grade Technology
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {/* HIPAA Compliance */}
               <div className="flex flex-col items-center text-center p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
                 <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-3">
@@ -160,6 +161,17 @@ const Footer = () => {
                 <h5 className="text-white font-semibold mb-2">HIPAA Compliant</h5>
                 <p className="text-white/70 text-sm">
                   Protected health information handled with strict compliance standards
+                </p>
+              </div>
+
+              {/* PIPEDA Compliance */}
+              <div className="flex flex-col items-center text-center p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300">
+                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-3">
+                  <Lock className="w-6 h-6 text-white" />
+                </div>
+                <h5 className="text-white font-semibold mb-2">PIPEDA Compliant</h5>
+                <p className="text-white/70 text-sm">
+                  Canadian privacy law compliance for personal information protection
                 </p>
               </div>
 

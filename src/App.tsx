@@ -27,6 +27,7 @@ const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const ProfessionalEthics = lazy(() => import("./pages/ProfessionalEthics"));
 const Licensing = lazy(() => import("./pages/Licensing"));
 const AIBestPractices = lazy(() => import("./pages/AIBestPractices"));
+const HipaaPipedaCompliance = lazy(() => import("./pages/HipaaPipedaCompliance"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -81,6 +82,7 @@ const App = () => (
             <Route path="/professional-ethics" element={<ProfessionalEthics />} />
             <Route path="/licensing" element={<Licensing />} />
             <Route path="/ai-best-practices" element={<AIBestPractices />} />
+            <Route path="/hipaa-pipeda-compliance" element={<HipaaPipedaCompliance />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
