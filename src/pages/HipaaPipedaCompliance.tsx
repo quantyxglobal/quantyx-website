@@ -229,15 +229,23 @@ const HipaaPipedaCompliance = () => {
               If you have any questions about our HIPAA or PIPEDA compliance practices, wish to exercise your
               privacy rights, or need to report a concern, please contact our Privacy Officer directly.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm mb-6">
               <div className="px-6 py-3 rounded-xl bg-primary/10 border border-primary/20">
-                <span className="font-semibold text-primary">Email: </span>
+                <span className="font-semibold text-primary">Privacy: </span>
                 <a href="mailto:privacy@quantyxg.com" className="text-muted-foreground hover:text-primary transition-colors">privacy@quantyxg.com</a>
               </div>
               <div className="px-6 py-3 rounded-xl bg-primary/10 border border-primary/20">
                 <span className="font-semibold text-primary">General: </span>
                 <a href="mailto:contact@quantyxg.com" className="text-muted-foreground hover:text-primary transition-colors">contact@quantyxg.com</a>
               </div>
+            </div>
+            <div className="text-sm text-muted-foreground space-y-1">
+              <p>
+                <a href="tel:+917075184488" className="text-primary hover:underline">+91 70751 84488</a> (India) &nbsp;|&nbsp;
+                <a href="tel:+61452257129" className="text-primary hover:underline">+61 452 257 129</a> (Australia) &nbsp;|&nbsp;
+                <a href="tel:+15129314563" className="text-primary hover:underline">+1 (512) 931-4563</a> (USA)
+              </p>
+              <p>#204, B Block, Old Grand World Road, Smart City Tirupati, Andhra Pradesh – 517501, India</p>
             </div>
           </section>
 

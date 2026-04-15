@@ -112,9 +112,11 @@ const TermsOfService = () => {
                     For questions about these Terms of Service, please contact us at:
                   </p>
                   <p className="text-muted-foreground leading-relaxed mt-4">
-                    Email: legal@quantyxg.com<br />
-                    Phone: +1 (555) 123-4567<br />
-                    Address: 123 Medical Plaza, Suite 456
+                    Email: <a href="mailto:legal@quantyxg.com" className="text-primary hover:underline">legal@quantyxg.com</a><br />
+                    Phone: <a href="tel:+917075184488" className="text-primary hover:underline">+91 70751 84488</a> (India) &nbsp;|&nbsp;
+                    <a href="tel:+61452257129" className="text-primary hover:underline">+61 452 257 129</a> (Australia) &nbsp;|&nbsp;
+                    <a href="tel:+15129314563" className="text-primary hover:underline">+1 (512) 931-4563</a> (USA)<br />
+                    Address: #204, B Block, Old Grand World Road, Smart City Tirupati, Andhra Pradesh – 517501, India
                   </p>
                 </div>
               </div>
