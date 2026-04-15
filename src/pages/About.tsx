@@ -40,13 +40,12 @@ const About = () => {
       name: "K. Varahala Raju",
       role: "Chief Executive Officer",
       image: "/pics/CEO.png"
+    },
+    {
+      name: "S. Megha Shyam Raju",
+      role: "Chief Technical Officer",
+      image: "/pics/CTO.png"
     }
-    // CTO card hidden per user request
-    // {
-    //   name: "S. Megha Shyam Raju",
-    //   role: "Chief Technical Officer",
-    //   image: "/pics/CTO.png"
-    // }
   ];
 
   return (
