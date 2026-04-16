@@ -9,7 +9,7 @@ const Hero = () => {
 
   const heroSlides = [
     {
-      badge: "Trusted Medical-Legal Expertise",
+      badge: "Trusted Medico-Legal Expertise",
       title: "Expert Medico-Legal",
       subtitle: "Summaries",
       description: "Bridging medicine and law with unparalleled expertise. Professional medical testimony, comprehensive reports, and expert summaries for legal professionals."

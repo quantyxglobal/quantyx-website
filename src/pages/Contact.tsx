@@ -374,7 +374,7 @@ const Contact = () => {
                 <div>
                   <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
                   <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                    Our team of medical-legal experts is ready to assist you with your case. 
+                    Our team of medico-legal experts is ready to assist you with your case. 
                     Contact us today to discuss how we can help you achieve better outcomes.
                   </p>
                 </div>

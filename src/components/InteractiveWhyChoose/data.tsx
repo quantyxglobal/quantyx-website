@@ -59,13 +59,13 @@ export const whyChooseItems: WhyChooseItem[] = [
     title: 'Innovation',
     icon: <Lightbulb className="w-8 h-8" />,
     description: 'Cutting-Edge Solutions',
-    detailedDescription: 'Stay ahead with our innovative approach to medical-legal services. We continuously invest in new technologies and methodologies to provide you with the most advanced tools and insights available in the industry.'
+    detailedDescription: 'Stay ahead with our innovative approach to medico-legal services. We continuously invest in new technologies and methodologies to provide you with the most advanced tools and insights available in the industry.'
   },
   {
     id: 'expertise',
     title: 'Expertise',
     icon: <GraduationCap className="w-8 h-8" />,
-    description: 'Medical-Legal Knowledge',
+    description: 'Medico-Legal Knowledge',
     detailedDescription: 'Benefit from our deep expertise in both medical and legal domains. Our team combines years of medical knowledge with legal acumen to provide comprehensive analysis that bridges the gap between healthcare and law.'
   },
   {

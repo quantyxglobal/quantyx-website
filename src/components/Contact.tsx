@@ -94,7 +94,7 @@ const Contact = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Get Expert <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Medical Legal</span> Support
+            Get Expert <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Medico-Legal</span> Support
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Ready to strengthen your case with professional medical expertise? 

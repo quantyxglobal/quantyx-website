@@ -11,7 +11,7 @@ const About = () => {
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Integrity",
-      description: "We maintain the highest ethical standards in all our medical-legal services."
+      description: "We maintain the highest ethical standards in all our medico-legal services."
     },
     {
       icon: <Target className="w-8 h-8" />,
@@ -53,7 +53,7 @@ const About = () => {
       <SEO
         title="About Quantyx Global | Expert Medico-Legal Services Team"
         description="Learn about Quantyx Global's mission to provide expert medico-legal services. Our team combines medical expertise with AI technology to deliver accurate, efficient legal support for law firms worldwide."
-        keywords="about quantyx global, medico-legal experts, medical legal team, AI legal services, law firm support"
+        keywords="about quantyx global, medico-legal experts, medico-legal team, AI legal services, law firm support"
         canonical="https://www.quantyxg.com/about"
         ogTitle="About Quantyx Global - Expert Medico-Legal Services"
         ogDescription="Combining medical expertise with AI technology to deliver exceptional medico-legal services for law firms."
@@ -74,7 +74,7 @@ const About = () => {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Leading the future of medical-legal services through innovative AI technology and unparalleled expertise.
+                Leading the future of medico-legal services through innovative AI technology and unparalleled expertise.
               </p>
             </div>
           </div>
@@ -160,7 +160,7 @@ const About = () => {
                 </span>
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Visionary leaders driving innovation in medical-legal services with decades of combined expertise.
+                Visionary leaders driving innovation in medico-legal services with decades of combined expertise.
               </p>
             </div>
             
@@ -214,7 +214,7 @@ const About = () => {
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Work With Us?</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Experience the difference that expert medical-legal services can make for your cases.
+              Experience the difference that expert medico-legal services can make for your cases.
             </p>
             <div className="flex justify-center">
               <Link to="/case-upload">

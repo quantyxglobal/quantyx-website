@@ -58,10 +58,10 @@ const Services = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Medical Legal</span> Services
+            Our <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Medico-Legal</span> Services
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive medical-legal expertise across multiple specialties, 
+            Comprehensive medico-legal expertise across multiple specialties, 
             providing the expert testimony and analysis you need for successful case outcomes.
           </p>
         </div>

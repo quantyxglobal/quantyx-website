@@ -29,7 +29,7 @@ const About = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               With over 25 years of combined experience in medicine and law, Dr. Mitchell brings 
-              unparalleled expertise to complex medical-legal cases. Board-certified in internal 
+              unparalleled expertise to complex medico-legal cases. Board-certified in internal 
               medicine with specialized training in forensic medicine and healthcare law.
             </p>
             
@@ -70,7 +70,7 @@ const About = () => {
                 <GraduationCap className="w-24 h-24 text-primary" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Dr. Sarah Mitchell, MD, JD</h3>
-              <p className="text-muted-foreground">Medical-Legal Expert</p>
+              <p className="text-muted-foreground">Medico-Legal Expert</p>
             </div>
             
             {/* Stats Grid */}

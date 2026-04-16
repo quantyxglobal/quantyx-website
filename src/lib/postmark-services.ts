@@ -124,7 +124,7 @@ Submitted at: ${new Date().toLocaleString()}
           <h2 style="color: #262083;">Thank you for contacting Quantyx Global!</h2>
           <p>Dear ${firstName},</p>
           <p>We have received your message and will get back to you within 24 hours.</p>
-          <p>Our team of medical-legal experts will review your inquiry and provide you with the information you need.</p>
+          <p>Our team of medico-legal experts will review your inquiry and provide you with the information you need.</p>
           
           <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="margin-top: 0;">Your Submission Details:</h3>
@@ -274,7 +274,7 @@ Submitted at: ${new Date().toLocaleString()}
           
           <h3 style="color: #262083;">What happens next?</h3>
           <ul style="line-height: 1.6;">
-            <li>Our medical-legal experts will review your documents within 24-48 hours</li>
+            <li>Our medico-legal experts will review your documents within 24-48 hours</li>
             <li>We will prepare a detailed quotation based on your specific requirements</li>
             <li>You will receive the quote via email along with project timeline information</li>
           </ul>
@@ -307,7 +307,7 @@ Dear ${fullName},
 Thank you for your quote request. We have received your documents and will review them carefully.
 
 What happens next:
-- Our medical-legal experts will review your documents within 24-48 hours
+- Our medico-legal experts will review your documents within 24-48 hours
 - We will prepare a detailed quotation based on your specific requirements
 - You will receive the quote via email along with project timeline information
 
