@@ -16,8 +16,8 @@ export const submitContactForm = async (formData: ContactFormData): Promise<ApiR
   try {
     console.log('Starting contact form submission...');
     console.log('Form data:', {
-      firstName: formData.firstName,
-      lastName: formData.lastName,
+      caseName: formData.caseName,
+      contactPersonName: formData.contactPersonName,
       email: formData.email,
       phone: formData.phone,
       company: formData.company,
@@ -27,7 +27,7 @@ export const submitContactForm = async (formData: ContactFormData): Promise<ApiR
     });
 
     // Validate required fields - company and country are required, message is optional
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.company || !formData.country) {
+    if (!formData.caseName || !formData.contactPersonName || !formData.email || !formData.phone || !formData.company || !formData.country) {
       throw new Error('Please fill in all required fields');
     }
 
@@ -66,8 +66,8 @@ export const submitContactForm = async (formData: ContactFormData): Promise<ApiR
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        firstName: formData.firstName,
-        lastName: formData.lastName,
+        caseName: formData.caseName,
+        contactPersonName: formData.contactPersonName,
         email: formData.email,
         phone: formData.phone,
         company: formData.company,

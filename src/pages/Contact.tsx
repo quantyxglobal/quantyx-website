@@ -13,8 +13,8 @@ import { SEO } from "@/components/SEO";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    caseName: "",
+    contactPersonName: "",
     email: "",
     phone: "",
     company: "",
@@ -72,7 +72,7 @@ const Contact = () => {
     e.preventDefault();
     
     // Validation - company, country, and files are required, message is optional
-    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.company || !formData.country) {
+    if (!formData.caseName || !formData.contactPersonName || !formData.email || !formData.phone || !formData.company || !formData.country) {
       setError("Please fill in all required fields");
       return;
     }
@@ -98,8 +98,8 @@ const Contact = () => {
       // Reset form after success
       setTimeout(() => {
         setFormData({
-          firstName: "",
-          lastName: "",
+          caseName: "",
+          contactPersonName: "",
           email: "",
           phone: "",
           company: "",
@@ -191,27 +191,26 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="firstName">First Name *</Label>
-                        <Input 
-                          id="firstName" 
-                          placeholder="John" 
-                          value={formData.firstName}
-                          onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                          required
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="lastName">Last Name *</Label>
-                        <Input 
-                          id="lastName" 
-                          placeholder="Doe" 
-                          value={formData.lastName}
-                          onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                          required
-                        />
-                      </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="caseName">Case Name *</Label>
+                      <Input
+                        id="caseName"
+                        placeholder="e.g. Smith v. General Hospital"
+                        value={formData.caseName}
+                        onChange={(e) => setFormData({ ...formData, caseName: e.target.value })}
+                        required
+                      />
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="contactPersonName">Contact Person Name *</Label>
+                      <Input
+                        id="contactPersonName"
+                        placeholder="Your full name"
+                        value={formData.contactPersonName}
+                        onChange={(e) => setFormData({ ...formData, contactPersonName: e.target.value })}
+                        required
+                      />
                     </div>
                     
                     <div className="space-y-2">
@@ -349,6 +348,11 @@ const Contact = () => {
                         <p className="text-sm text-red-700">{error}</p>
                       </div>
                     )}
+
+                    {/* Confidentiality Notice */}
+                    <p className="text-xs text-muted-foreground leading-relaxed border border-border rounded-lg p-3 bg-muted/30">
+                      All case information is treated as strictly confidential and protected by our HIPAA-compliant privacy policies and NDA.
+                    </p>
                     
                     <Button 
                       type="submit" 

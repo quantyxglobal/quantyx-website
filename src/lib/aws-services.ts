@@ -47,8 +47,8 @@ export interface EmailResult {
 }
 
 export interface ContactFormData {
-  firstName: string;
-  lastName: string;
+  caseName: string;
+  contactPersonName: string;
   email: string;
   phone: string;
   company: string;
