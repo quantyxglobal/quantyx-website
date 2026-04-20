@@ -33,6 +33,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-8">
             <Link to="/" className="text-foreground/80 hover:text-primary transition-all font-medium">Home</Link>
             <Link to="/services" className="text-foreground/80 hover:text-primary transition-all font-medium">Services</Link>
+            <Link to="/ai-best-practices" className="text-foreground/80 hover:text-primary transition-all font-medium">Our AI Approach</Link>
 
             {/* Global Delivery Dropdown */}
             <div className="relative" ref={globalRef}>
@@ -113,6 +114,7 @@ const Header = () => {
             <nav className="flex flex-col gap-4">
               <Link to="/" className="text-foreground/80 hover:text-primary transition-all font-medium" onClick={() => setMobileMenuOpen(false)}>Home</Link>
               <Link to="/services" className="text-foreground/80 hover:text-primary transition-all font-medium" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+              <Link to="/ai-best-practices" className="text-foreground/80 hover:text-primary transition-all font-medium" onClick={() => setMobileMenuOpen(false)}>Our AI Approach</Link>
 
               {/* Global Delivery mobile */}
               <div>

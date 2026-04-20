@@ -9,22 +9,6 @@ const Hero = () => {
 
   const heroSlides = [
     {
-      badge: "Trusted Medico-Legal Expertise",
-      title: "Expert Reports Delivered in",
-      subtitle: "24–48 Hours (Rush Delivery)",
-      description: "Accurate Medical Chronologies & Expert Reports — Physician-Reviewed. Ready in 3–5 Days standard, 24–48 Hours rush. HIPAA-Aligned.",
-      cta: "default",
-      smallTitle: true
-    },
-    {
-      badge: "Professional Medical Analysis",
-      title: "Comprehensive Medical",
-      subtitle: "Documentation",
-      description: "Transform complex medical records into clear, organized reports. Our expert team delivers precise chronologies, summaries, and analysis for stronger legal cases.",
-      cta: "default",
-      smallTitle: false
-    },
-    {
       badge: "First Case on Us — US Law Firms",
       title: "First 500 Pages",
       subtitle: "Free",
@@ -33,11 +17,27 @@ const Hero = () => {
       smallTitle: false
     },
     {
-      badge: "Board-Certified Experts",
-      title: "Expert Medical",
-      subtitle: "Opinions",
-      description: "Get authoritative medical opinions from board-certified physicians. Professional analysis and expert testimony to support your legal arguments.",
+      badge: "Trusted Medico-Legal Expertise",
+      title: "Expert Reports Delivered in",
+      subtitle: "24–48 Hours (Rush Delivery)",
+      description: "Accurate Medical Chronologies & Expert Reports — Physician-Reviewed. Ready in 3–5 Days standard, 24–48 Hours rush. HIPAA-Compliant.",
       cta: "default",
+      smallTitle: true
+    },
+    {
+      badge: "Professional Medical Analysis",
+      title: "Comprehensive Medical",
+      subtitle: "Documentation",
+      description: "Physicians handle every case. AI accelerates the process — organising records, flagging key events, and structuring reports so doctors can focus on what matters: accurate analysis.",
+      cta: "default",
+      smallTitle: false
+    },
+    {
+      badge: "AI-Assisted. Physician-Verified.",
+      title: "Faster Analysis,",
+      subtitle: "Human Expertise",
+      description: "Our AI processes thousands of pages in minutes — identifying patterns, gaps, and key medical events. Every output is then reviewed and validated by a licensed physician before delivery.",
+      cta: "ai",
       smallTitle: false
     },
     {
@@ -81,9 +81,9 @@ const Hero = () => {
         >
           {/* Badge with animation */}
           <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-primary/20 rounded-full px-6 py-3 mb-8 shadow-lg transition-all duration-500" style={{ boxShadow: 'var(--shadow-elegant)' }}>
-            {currentSlide === 4 ? (
+            {currentHero.cta === 'quote' ? (
               <Calculator className="w-4 h-4 text-primary" />
-            ) : currentSlide === 0 ? (
+            ) : currentHero.cta === 'free' ? (
               <Award className="w-4 h-4 text-primary" />
             ) : (
               <Shield className="w-4 h-4 text-primary" />
@@ -136,13 +136,25 @@ const Hero = () => {
           {/* CTA Buttons - Dynamic based on current slide */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             {currentHero.cta === 'free' ? (
-              // First case free slide
               <>
-                <a href="https://dashboard.quantyxg.com/register" target="_blank" rel="noopener noreferrer">
+                <Link to="/case-upload">
                   <Button size="xl" className="shadow-2xl" style={{ boxShadow: 'var(--shadow-elegant)' }}>
                     Claim Your Free Review
                   </Button>
-                </a>
+                </Link>
+                <Link to="/services">
+                  <Button variant="outline" size="xl" className="border-primary/30 hover:border-primary/50 hover:bg-primary/5">
+                    View Our Services
+                  </Button>
+                </Link>
+              </>
+            ) : currentHero.cta === 'ai' ? (
+              <>
+                <Link to="/ai-best-practices">
+                  <Button size="xl" className="shadow-2xl" style={{ boxShadow: 'var(--shadow-elegant)' }}>
+                    Our AI Approach
+                  </Button>
+                </Link>
                 <Link to="/services">
                   <Button variant="outline" size="xl" className="border-primary/30 hover:border-primary/50 hover:bg-primary/5">
                     View Our Services
@@ -150,7 +162,6 @@ const Hero = () => {
                 </Link>
               </>
             ) : currentHero.cta === 'quote' ? (
-              // Instant Quote slide buttons
               <>
                 <Link to="/quote">
                   <Button size="xl" className="shadow-2xl" style={{ boxShadow: 'var(--shadow-elegant)' }}>
@@ -165,7 +176,6 @@ const Hero = () => {
                 </Link>
               </>
             ) : (
-              // Default buttons for other slides
               <>
                 <Link to="/quote">
                   <Button size="xl" className="shadow-2xl" style={{ boxShadow: 'var(--shadow-elegant)' }}>
@@ -188,24 +198,24 @@ const Hero = () => {
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg" style={{ boxShadow: 'var(--shadow-glow)' }}>
                   <Award className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-bold text-2xl mb-2 text-primary">Board Certified</h3>
-                <p className="text-sm text-muted-foreground">Licensed medical professionals ready to provide expert analysis</p>
+                <h3 className="font-bold text-2xl mb-2 text-primary">Physician-Reviewed</h3>
+                <p className="text-sm text-muted-foreground">Every report is reviewed and validated by licensed medical professionals — not just generated by software.</p>
               </div>
 
               <div className="text-center stagger-animation" style={{ animationDelay: '0.7s' }}>
                 <div className="w-16 h-16 bg-gradient-to-br from-accent to-amber-500 rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg">
                   <Stethoscope className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-bold text-2xl mb-2 text-primary">Medical Expertise</h3>
-                <p className="text-sm text-muted-foreground">Comprehensive knowledge across multiple medical specialties</p>
+                <h3 className="font-bold text-2xl mb-2 text-primary">AI-Accelerated</h3>
+                <p className="text-sm text-muted-foreground">AI processes and organises records at speed — so physicians spend their time on analysis, not administration.</p>
               </div>
 
               <div className="text-center stagger-animation" style={{ animationDelay: '0.8s' }}>
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary-glow rounded-2xl flex items-center justify-center mb-4 mx-auto shadow-lg" style={{ boxShadow: 'var(--shadow-glow)' }}>
                   <Shield className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-bold text-2xl mb-2 text-primary">Legal Standards</h3>
-                <p className="text-sm text-muted-foreground">Court-ready documentation meeting all legal requirements</p>
+                <h3 className="font-bold text-2xl mb-2 text-primary">Court-Ready</h3>
+                <p className="text-sm text-muted-foreground">HIPAA-compliant documentation formatted to meet legal standards and court admissibility requirements.</p>
               </div>
             </div>
           </div>
