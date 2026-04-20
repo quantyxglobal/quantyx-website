@@ -137,9 +137,6 @@ const HipaaPipedaCompliance = () => {
               <Link to="/case-upload">
                 <Button variant="professional" size="lg" style={{ boxShadow: 'var(--shadow-elegant)' }}>Upload Case Records</Button>
               </Link>
-              <a href="mailto:contact@quantyxg.com">
-                <Button variant="outline" size="lg">Request BAA Template</Button>
-              </a>
             </div>
             <p className="text-sm text-muted-foreground mt-6">Last updated: April 14, 2026</p>
           </div>
@@ -455,15 +452,11 @@ const HipaaPipedaCompliance = () => {
             <div className="max-w-2xl mx-auto">
               <h2 className="text-2xl font-bold mb-3">Privacy Questions or Concerns?</h2>
               <p className="text-muted-foreground mb-6">
-                If you have any questions about our compliance practices, wish to exercise your privacy rights, or need to report a concern, please contact our Privacy Officer directly.
+                If you have any questions about our compliance practices, wish to exercise your privacy rights, or need to report a concern, please contact us directly.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4 text-sm mb-6">
+              <div className="flex justify-center text-sm mb-6">
                 <div className="px-6 py-3 rounded-xl bg-primary/10 border border-primary/20">
-                  <span className="font-semibold text-primary">Privacy: </span>
-                  <a href="mailto:privacy@quantyxg.com" className="text-muted-foreground hover:text-primary transition-colors">privacy@quantyxg.com</a>
-                </div>
-                <div className="px-6 py-3 rounded-xl bg-primary/10 border border-primary/20">
-                  <span className="font-semibold text-primary">General: </span>
+                  <span className="font-semibold text-primary">Email: </span>
                   <a href="mailto:contact@quantyxg.com" className="text-muted-foreground hover:text-primary transition-colors">contact@quantyxg.com</a>
                 </div>
               </div>
