@@ -29,6 +29,13 @@ const Licensing = lazy(() => import("./pages/Licensing"));
 const AIBestPractices = lazy(() => import("./pages/AIBestPractices"));
 const HipaaPipedaCompliance = lazy(() => import("./pages/HipaaPipedaCompliance"));
 
+// Lazy load new pages
+const HipaaPage = lazy(() => import("./pages/HipaaPage"));
+const Pricing = lazy(() => import("./pages/Pricing"));
+const LandingUS = lazy(() => import("./pages/LandingUS"));
+const LandingAustralia = lazy(() => import("./pages/LandingAustralia"));
+const LandingCanada = lazy(() => import("./pages/LandingCanada"));
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -83,6 +90,11 @@ const App = () => (
             <Route path="/licensing" element={<Licensing />} />
             <Route path="/ai-best-practices" element={<AIBestPractices />} />
             <Route path="/hipaa-pipeda-compliance" element={<HipaaPipedaCompliance />} />
+            <Route path="/hipaa" element={<HipaaPage />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/us" element={<LandingUS />} />
+            <Route path="/australia" element={<LandingAustralia />} />
+            <Route path="/canada" element={<LandingCanada />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
