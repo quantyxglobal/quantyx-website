@@ -49,8 +49,7 @@ const Footer = () => {
               </Link>
             </div>
             <p className="text-white/90 mb-6 max-w-md text-lg leading-relaxed">
-              Bridging the gap between medicine and law with expert testimony,
-              comprehensive medical evaluations, and professional consultation services.
+              Medical Chronologies & Expert Reports analyzed by doctors — Delivered in 48–72 Hours. HIPAA compliant.
             </p>
             <div className="space-y-3">
               <div className="flex items-start gap-3 text-white/80 hover:text-white transition-colors">

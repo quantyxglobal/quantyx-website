@@ -10,9 +10,9 @@ const Hero = () => {
   const heroSlides = [
     {
       badge: "Trusted Medico-Legal Expertise",
-      title: "Expert Reports Delivered in",
-      subtitle: "24–48 Hours (Rush Delivery)",
-      description: "Accurate Medical Chronologies & Expert Reports — Physician-Reviewed. Ready in 3–5 Days standard, 24–48 Hours rush. HIPAA-Aligned."
+      title: "Medical Chronologies & Expert Reports",
+      subtitle: "Analyzed by Doctors",
+      description: "Physician-reviewed. Standard delivery in 3–5 days. Rush delivery in 24–48 hours. HIPAA compliant and court-ready."
     },
     {
       badge: "Professional Medical Analysis",
