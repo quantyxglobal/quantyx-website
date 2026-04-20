@@ -10,27 +10,43 @@ const Hero = () => {
   const heroSlides = [
     {
       badge: "Trusted Medico-Legal Expertise",
-      title: "Medical Chronologies & Expert Reports",
-      subtitle: "Analyzed by Doctors",
-      description: "Physician-reviewed. Standard delivery in 3–5 days. Rush delivery in 24–48 hours. HIPAA compliant and court-ready."
+      title: "Expert Reports Delivered in",
+      subtitle: "24–48 Hours (Rush Delivery)",
+      description: "Accurate Medical Chronologies & Expert Reports — Physician-Reviewed. Ready in 3–5 Days standard, 24–48 Hours rush. HIPAA-Aligned.",
+      cta: "default",
+      smallTitle: true
     },
     {
       badge: "Professional Medical Analysis",
       title: "Comprehensive Medical",
       subtitle: "Documentation",
-      description: "Transform complex medical records into clear, organized reports. Our expert team delivers precise chronologies, summaries, and analysis for stronger legal cases."
+      description: "Transform complex medical records into clear, organized reports. Our expert team delivers precise chronologies, summaries, and analysis for stronger legal cases.",
+      cta: "default",
+      smallTitle: false
+    },
+    {
+      badge: "First Case on Us — US Law Firms",
+      title: "First 500 Pages",
+      subtitle: "Free",
+      description: "Try Quantyx Global risk-free. Upload your first case — up to 500 pages — and receive a complete physician-reviewed report at no charge. No credit card required.",
+      cta: "free",
+      smallTitle: false
     },
     {
       badge: "Board-Certified Experts",
       title: "Expert Medical",
       subtitle: "Opinions",
-      description: "Get authoritative medical opinions from board-certified physicians. Professional analysis and expert testimony to support your legal arguments."
+      description: "Get authoritative medical opinions from board-certified physicians. Professional analysis and expert testimony to support your legal arguments.",
+      cta: "default",
+      smallTitle: false
     },
     {
       badge: "Instant Cost Estimation",
       title: "Get Your Quote",
       subtitle: "Instantly",
-      description: "Upload your PDF files and receive precise cost estimates in seconds. No waiting, no phone calls, no meetings required - just instant, transparent pricing for all your medico-legal services."
+      description: "Upload your PDF files and receive precise cost estimates in seconds. No waiting, no phone calls, no meetings required - just instant, transparent pricing for all your medico-legal services.",
+      cta: "quote",
+      smallTitle: false
     }
   ];
 
@@ -65,8 +81,10 @@ const Hero = () => {
         >
           {/* Badge with animation */}
           <div className="inline-flex items-center gap-2 bg-card/80 backdrop-blur-sm border border-primary/20 rounded-full px-6 py-3 mb-8 shadow-lg transition-all duration-500" style={{ boxShadow: 'var(--shadow-elegant)' }}>
-            {currentSlide === 3 ? (
+            {currentSlide === 4 ? (
               <Calculator className="w-4 h-4 text-primary" />
+            ) : currentSlide === 0 ? (
+              <Award className="w-4 h-4 text-primary" />
             ) : (
               <Shield className="w-4 h-4 text-primary" />
             )}
@@ -76,10 +94,10 @@ const Hero = () => {
           </div>
 
           {/* Main heading with carousel animation */}
-          <div className="relative h-32 md:h-40 mb-6">
+          <div className={`relative mb-6 ${currentHero.smallTitle ? 'h-36 md:h-44' : 'h-32 md:h-40'}`}>
             <h1
               key={currentSlide}
-              className="text-5xl md:text-7xl font-bold leading-tight hero-slide-enter"
+              className={`font-bold leading-tight hero-slide-enter ${currentHero.smallTitle ? 'text-4xl md:text-6xl' : 'text-5xl md:text-7xl'}`}
             >
               <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
                 {currentHero.title}
@@ -117,7 +135,21 @@ const Hero = () => {
 
           {/* CTA Buttons - Dynamic based on current slide */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            {currentSlide === 3 ? (
+            {currentHero.cta === 'free' ? (
+              // First case free slide
+              <>
+                <a href="https://dashboard.quantyxg.com/register" target="_blank" rel="noopener noreferrer">
+                  <Button size="xl" className="shadow-2xl" style={{ boxShadow: 'var(--shadow-elegant)' }}>
+                    Claim Your Free Review
+                  </Button>
+                </a>
+                <Link to="/services">
+                  <Button variant="outline" size="xl" className="border-primary/30 hover:border-primary/50 hover:bg-primary/5">
+                    View Our Services
+                  </Button>
+                </Link>
+              </>
+            ) : currentHero.cta === 'quote' ? (
               // Instant Quote slide buttons
               <>
                 <Link to="/quote">
