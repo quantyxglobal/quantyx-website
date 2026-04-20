@@ -68,7 +68,7 @@ const whyUs = [
   {
     num: "02",
     title: "Faster Than Australian Local Providers",
-    desc: "Local medico-legal providers typically take 2–4 weeks. We deliver in 48–72 hours — without compromising quality.",
+    desc: "Local medico-legal providers typically take 2–4 weeks. We deliver in 3–5 days — without compromising quality.",
   },
   {
     num: "03",
@@ -87,15 +87,15 @@ const whyUs = [
   },
   {
     num: "06",
-    title: "Transparent Estimate Within 2 Hours",
-    desc: "Fixed-price estimate within 2 hours of submission. Work begins only after your written approval. Invoiced in AUD.",
+    title: "Transparent Estimate Within 6–8 Hours",
+    desc: "Fixed-price estimate within 6–8 hours of submission. Work begins only after your written approval. Invoiced in AUD.",
   },
 ];
 
 const stats = [
-  { value: "48–72h", label: "Standard turnaround" },
-  { value: "24h", label: "Urgent delivery available" },
-  { value: "20+", label: "Medical specialties" },
+  { value: "3–5 days", label: "Standard turnaround" },
+  { value: "24–48h", label: "Urgent delivery available" },
+  { value: "24/7", label: "Round the clock case support" },
   { value: "APPs", label: "Privacy compliant" },
 ];
 
@@ -104,11 +104,11 @@ const LandingAustralia = () => {
     <div className="min-h-screen">
       <SEO
         title="Independent Medico-Legal Reports for Australian Law Firms | Quantyx Global"
-        description="Privacy Act 1988 compliant medico-legal reports, medical chronologies, and IMRs for Australian law firms and insurers. CTP, WorkCover, and PI specialists. 48–72 hour turnaround."
+        description="Privacy Act 1988 compliant medico-legal reports, medical chronologies, and IMRs for Australian law firms and insurers. CTP, WorkCover, and PI specialists. 3–5 day turnaround."
         keywords="medico-legal reports Australia, medical chronology CTP, WorkCover medical review, Privacy Act 1988, independent medical report, personal injury Australia"
         canonical="https://www.quantyxg.com/australia"
         ogTitle="Independent Medico-Legal Reports for Australian Law Firms | Quantyx Global"
-        ogDescription="Privacy Act 1988 compliant. CTP & WorkCover experienced. 48–72 hour turnaround for Australian law firms and insurers."
+        ogDescription="Privacy Act 1988 compliant. CTP & WorkCover experienced. 3–5 day turnaround for Australian law firms and insurers."
         noindex={false}
       />
       <Header />
@@ -133,7 +133,7 @@ const LandingAustralia = () => {
               Privacy Act 1988 compliant medical record review, chronologies, IMRs, and expert reports — purpose-built for CTP, WorkCover, and personal injury practitioners across Australia.
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-10">
-              {["Privacy Act 1988 Compliant", "Australian Privacy Principles (APPs)", "CTP & WorkCover Experienced", "48–72 Hr Standard TAT"].map((badge) => (
+              {["Privacy Act 1988 Compliant", "Australian Privacy Principles (APPs)", "CTP & WorkCover Experienced", "3–5 Day Standard TAT"].map((badge) => (
                 <span key={badge} className="px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20">
                   {badge}
                 </span>
@@ -146,7 +146,7 @@ const LandingAustralia = () => {
                 </Button>
               </Link>
               <a href="mailto:contact@quantyxg.com">
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white transition-colors">
                   Request a Sample Report
                 </Button>
               </a>
@@ -254,19 +254,19 @@ const LandingAustralia = () => {
           <div className="container mx-auto px-6 text-center">
             <div className="max-w-2xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Independent Medico-Legal Reports — Delivered in 48–72 Hours
+                Independent Medico-Legal Reports — Delivered in 3–5 Days
               </h2>
               <p className="text-white/80 mb-8">
-                Submit your matter and receive a fixed-price estimate within 2 hours. Invoiced in AUD.
+                Submit your matter and receive a fixed-price estimate within 6–8 hours. Invoiced in AUD.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <Link to="/case-upload">
-                  <Button variant="hero" size="lg" className="bg-white text-primary hover:bg-white/90">
+                  <Button size="lg" className="bg-white text-primary font-semibold hover:bg-white/90 shadow-lg">
                     Submit a Matter
                   </Button>
                 </Link>
                 <a href="mailto:contact@quantyxg.com">
-                  <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+                  <Button size="lg" className="bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-primary transition-colors">
                     Request a Sample Report
                   </Button>
                 </a>

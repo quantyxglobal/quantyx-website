@@ -113,7 +113,7 @@ const NarrativeSummary = () => {
                     <ul className="space-y-3 mb-6">
                       <li className="flex items-center text-sm">
                         <CheckCircle className="w-4 h-4 text-primary mr-3" />
-                        48-72 hour turnaround
+                        3–5 day turnaround
                       </li>
                       <li className="flex items-center text-sm">
                         <CheckCircle className="w-4 h-4 text-primary mr-3" />

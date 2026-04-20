@@ -105,8 +105,8 @@ const About = () => {
                   <div className="text-sm text-muted-foreground">Years Experience</div>
                 </div>
                 <div className="text-center p-6 rounded-2xl bg-accent/10">
-                  <div className="text-3xl font-bold text-accent mb-2">48-72</div>
-                  <div className="text-sm text-muted-foreground">hrs average TAT</div>
+                  <div className="text-3xl font-bold text-accent mb-2">3–5</div>
+                  <div className="text-sm text-muted-foreground">days average TAT</div>
                 </div>
                 <div className="text-center p-6 rounded-2xl bg-primary/10">
                   <div className="text-3xl font-bold text-primary mb-2">95%</div>

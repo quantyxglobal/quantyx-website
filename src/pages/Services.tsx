@@ -705,7 +705,7 @@ const Services = () => {
                 </div>
                 <div className="p-6 bg-primary/5 rounded-lg">
                   <h3 className="font-semibold text-primary mb-2">Fast Turnaround</h3>
-                  <p className="text-sm text-muted-foreground">48-72 hour average turnaround time without compromising quality or accuracy.</p>
+                  <p className="text-sm text-muted-foreground">3–5 day average turnaround time without compromising quality or accuracy.</p>
                 </div>
                 <div className="p-6 bg-primary/5 rounded-lg">
                   <h3 className="font-semibold text-primary mb-2">Court-Ready</h3>

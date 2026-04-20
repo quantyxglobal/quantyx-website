@@ -67,7 +67,7 @@ const whyUs = [
   {
     num: "02",
     title: "Dramatically Faster Than Local Alternatives",
-    desc: "Local providers typically take 3–6 weeks. We deliver in 48–72 hours — without compromising the quality your cases require.",
+    desc: "Local providers typically take 3–6 weeks. We deliver in 3–5 days — without compromising the quality your cases require.",
   },
   {
     num: "03",
@@ -86,15 +86,15 @@ const whyUs = [
   },
   {
     num: "06",
-    title: "Estimate in 2 Hours. No Surprises.",
-    desc: "Fixed-price estimate within 2 hours of submission. Work begins only after your written approval. Invoiced in CAD.",
+    title: "Estimate in 6–8 Hours. No Surprises.",
+    desc: "Fixed-price estimate within 6–8 hours of submission. Work begins only after your written approval. Invoiced in CAD.",
   },
 ];
 
 const stats = [
-  { value: "48–72h", label: "Standard turnaround" },
-  { value: "24h", label: "Rush delivery available" },
-  { value: "20+", label: "Medical specialties" },
+  { value: "3–5 days", label: "Standard turnaround" },
+  { value: "24–48h", label: "Rush delivery available" },
+  { value: "24/7", label: "Round the clock case support" },
   { value: "PIPEDA + PHIPA", label: "Compliant" },
 ];
 
@@ -103,11 +103,11 @@ const LandingCanada = () => {
     <div className="min-h-screen">
       <SEO
         title="Medical Chronologies for Canadian Law Firms | PIPEDA & PHIPA Compliant | Quantyx Global"
-        description="PIPEDA and PHIPA compliant medical chronologies, summaries, and expert reports for Canadian personal injury law firms. MVA, SABS, LAT, ICBC experienced. 48–72 hour turnaround."
+        description="PIPEDA and PHIPA compliant medical chronologies, summaries, and expert reports for Canadian personal injury law firms. MVA, SABS, LAT, ICBC experienced. 3–5 day turnaround."
         keywords="medical chronology Canada, PIPEDA compliant, PHIPA Ontario, SABS medical review, LAT proceedings, MVA medical records, personal injury Canada"
         canonical="https://www.quantyxg.com/canada"
         ogTitle="Medical Chronologies for Canadian Law Firms | PIPEDA & PHIPA Compliant | Quantyx Global"
-        ogDescription="PIPEDA + PHIPA compliant. MVA, SABS & LAT experienced. 48–72 hour turnaround for Canadian personal injury firms."
+        ogDescription="PIPEDA + PHIPA compliant. MVA, SABS & LAT experienced. 3–5 day turnaround for Canadian personal injury firms."
         noindex={false}
       />
       <Header />
@@ -132,7 +132,7 @@ const LandingCanada = () => {
               PIPEDA and PHIPA compliant medical record review, chronologies, summaries, and expert reports — purpose-built for MVA, SABS, and personal injury practitioners across Canada.
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-10">
-              {["PIPEDA Compliant", "PHIPA (Ontario) Compliant", "MVA & SABS Experienced", "48–72 Hr Standard TAT", "AI-Assisted Review"].map((badge) => (
+              {["PIPEDA Compliant", "PHIPA (Ontario) Compliant", "MVA & SABS Experienced", "3–5 Day Standard TAT", "AI-Assisted Review"].map((badge) => (
                 <span key={badge} className="px-4 py-2 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20">
                   {badge}
                 </span>
@@ -145,7 +145,7 @@ const LandingCanada = () => {
                 </Button>
               </Link>
               <a href="mailto:contact@quantyxg.com">
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-white transition-colors">
                   Request a Sample Report
                 </Button>
               </a>
@@ -249,19 +249,19 @@ const LandingCanada = () => {
           <div className="container mx-auto px-6 text-center">
             <div className="max-w-2xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Medical Chronologies & Expert Reports — Delivered in 48–72 Hours
+                Medical Chronologies & Expert Reports — Delivered in 3–5 Days
               </h2>
               <p className="text-white/80 mb-8">
-                Submit your file and receive a fixed-price estimate within 2 hours. Invoiced in CAD.
+                Submit your file and receive a fixed-price estimate within 6–8 hours. Invoiced in CAD.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <Link to="/case-upload">
-                  <Button variant="hero" size="lg" className="bg-white text-primary hover:bg-white/90">
+                  <Button size="lg" className="bg-white text-primary font-semibold hover:bg-white/90 shadow-lg">
                     Submit a File
                   </Button>
                 </Link>
                 <a href="mailto:contact@quantyxg.com">
-                  <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10">
+                  <Button size="lg" className="bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-primary transition-colors">
                     Request a Sample Report
                   </Button>
                 </a>

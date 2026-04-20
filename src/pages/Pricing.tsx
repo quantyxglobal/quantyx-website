@@ -32,7 +32,7 @@ const steps = [
   },
   {
     step: "Step 4",
-    timing: "48–72 hours",
+    timing: "3–5 days",
     title: "Expert Review & Drafting",
     desc: "Your matter is assigned to a specialist. AI assists with initial analysis; a qualified expert reviews and verifies every output.",
   },
@@ -63,7 +63,7 @@ const pricingFactors = [
   {
     factor: "Turnaround required",
     how: "Rush (24h) carries a premium, always disclosed upfront",
-    example: "Standard 48–72h vs rush 24h rate",
+    example: "Standard 3–5 days vs rush 24–48h rate",
   },
   {
     factor: "Firm template use",
