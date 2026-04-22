@@ -208,11 +208,10 @@ const BAATemplate = () => {
               </button>
 
               {/* PDF Viewer */}
-              <embed
+              <iframe
                 src={selectedPDF}
-                type="application/pdf"
                 className="w-full h-full"
-                aria-label="PDF Document Viewer"
+                title="PDF Document Viewer"
                 sandbox="allow-same-origin"
               />
             </div>
