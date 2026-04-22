@@ -208,28 +208,12 @@ const BAATemplate = () => {
               </button>
 
               {/* PDF Viewer */}
-              <object
-                data={selectedPDF}
+              <embed
+                src={selectedPDF}
                 type="application/pdf"
                 className="w-full h-full"
                 aria-label="PDF Document Viewer"
-              >
-                <div className="flex items-center justify-center h-full p-8 text-center">
-                  <div>
-                    <FileText className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-                    <p className="text-muted-foreground mb-4">
-                      Your browser doesn't support PDF viewing.
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      Please contact us at{" "}
-                      <a href="mailto:contact@quantyxg.com" className="text-primary hover:underline">
-                        contact@quantyxg.com
-                      </a>
-                      {" "}to request a copy.
-                    </p>
-                  </div>
-                </div>
-              </object>
+              />
             </div>
           </div>
         )}

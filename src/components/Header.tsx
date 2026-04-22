@@ -77,6 +77,7 @@ const Header = () => {
             </Link>
 
             <Link to="/about" className="text-foreground/80 hover:text-primary transition-all font-medium">About</Link>
+            <Link to="/pricing" className="text-foreground/80 hover:text-primary transition-all font-medium">Pricing</Link>
             <Link to="/case-upload" className="text-foreground/80 hover:text-primary transition-all font-medium">Case Upload</Link>
           </nav>
 
@@ -128,6 +129,7 @@ const Header = () => {
 
               <Link to="/hipaa-pipeda-compliance" className="text-foreground/80 hover:text-primary transition-all font-medium" onClick={() => setMobileMenuOpen(false)}>Why Trust Us</Link>
               <Link to="/about" className="text-foreground/80 hover:text-primary transition-all font-medium" onClick={() => setMobileMenuOpen(false)}>About</Link>
+              <Link to="/pricing" className="text-foreground/80 hover:text-primary transition-all font-medium" onClick={() => setMobileMenuOpen(false)}>Pricing</Link>
               <Link to="/case-upload" className="text-foreground/80 hover:text-primary transition-all font-medium" onClick={() => setMobileMenuOpen(false)}>Case Upload</Link>
               <a
                 href={import.meta.env.VITE_DASHBOARD_URL || 'http://localhost:3000/login'}
