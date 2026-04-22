@@ -9,7 +9,7 @@ const Hero = () => {
 
   const heroSlides = [
     {
-      badge: "First Case on Us — US Law Firms",
+      badge: "First Case on Us",
       title: "First 500 Pages",
       subtitle: "Free",
       description: "Try Quantyx Global risk-free. Upload your first case — up to 500 pages — and receive a complete physician-reviewed report at no charge. No credit card required.",
