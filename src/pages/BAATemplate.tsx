@@ -212,7 +212,7 @@ const BAATemplate = () => {
                 src={selectedPDF}
                 className="w-full h-full"
                 title="PDF Document Viewer"
-                sandbox="allow-same-origin"
+                sandbox="allow-same-origin allow-scripts"
               />
             </div>
           </div>
