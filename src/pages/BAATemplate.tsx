@@ -59,21 +59,19 @@ const BAATemplate = () => {
                   </div>
                   
                   <div className="bg-muted/50 rounded-xl p-6 border border-border">
-                    <div className="aspect-[8.5/11] bg-white rounded-lg shadow-inner overflow-hidden">
-                      <iframe
-                        src="/Business%20Associate%20Agreement%20(BAA).pdf"
-                        className="w-full h-full"
-                        title="Business Associate Agreement"
-                      />
-                    </div>
-                    <div className="mt-4 text-center">
+                    <div className="bg-white rounded-lg shadow-inner p-8 text-center">
+                      <FileText className="w-16 h-16 text-primary mx-auto mb-4" />
+                      <h3 className="text-lg font-semibold mb-2">Business Associate Agreement</h3>
+                      <p className="text-muted-foreground mb-4 text-sm">
+                        Click below to view the BAA document in a new tab
+                      </p>
                       <a
                         href="/Business%20Associate%20Agreement%20(BAA).pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary hover:underline text-sm font-medium"
+                        className="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
                       >
-                        Open BAA in New Tab →
+                        View BAA Document
                       </a>
                     </div>
                   </div>
@@ -96,21 +94,19 @@ const BAATemplate = () => {
                   </div>
                   
                   <div className="bg-muted/50 rounded-xl p-6 border border-border">
-                    <div className="aspect-[8.5/11] bg-white rounded-lg shadow-inner overflow-hidden">
-                      <iframe
-                        src="/Non-Disclosure%20Agreement%20(NDA).pdf"
-                        className="w-full h-full"
-                        title="Non-Disclosure Agreement"
-                      />
-                    </div>
-                    <div className="mt-4 text-center">
+                    <div className="bg-white rounded-lg shadow-inner p-8 text-center">
+                      <FileText className="w-16 h-16 text-accent mx-auto mb-4" />
+                      <h3 className="text-lg font-semibold mb-2">Non-Disclosure Agreement</h3>
+                      <p className="text-muted-foreground mb-4 text-sm">
+                        Click below to view the NDA document in a new tab
+                      </p>
                       <a
                         href="/Non-Disclosure%20Agreement%20(NDA).pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary hover:underline text-sm font-medium"
+                        className="inline-block px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-colors"
                       >
-                        Open NDA in New Tab →
+                        View NDA Document
                       </a>
                     </div>
                   </div>
@@ -133,21 +129,19 @@ const BAATemplate = () => {
                   </div>
                   
                   <div className="bg-muted/50 rounded-xl p-6 border border-border">
-                    <div className="aspect-[8.5/11] bg-white rounded-lg shadow-inner overflow-hidden">
-                      <iframe
-                        src="/Service%20Level%20Agreement%20(SLA).pdf"
-                        className="w-full h-full"
-                        title="Service Level Agreement"
-                      />
-                    </div>
-                    <div className="mt-4 text-center">
+                    <div className="bg-white rounded-lg shadow-inner p-8 text-center">
+                      <FileText className="w-16 h-16 text-primary mx-auto mb-4" />
+                      <h3 className="text-lg font-semibold mb-2">Service Level Agreement</h3>
+                      <p className="text-muted-foreground mb-4 text-sm">
+                        Click below to view the SLA document in a new tab
+                      </p>
                       <a
                         href="/Service%20Level%20Agreement%20(SLA).pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary hover:underline text-sm font-medium"
+                        className="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
                       >
-                        Open SLA in New Tab →
+                        View SLA Document
                       </a>
                     </div>
                   </div>
