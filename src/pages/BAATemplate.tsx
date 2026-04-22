@@ -1,20 +1,53 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { FileText, Shield, X } from "lucide-react";
+import { FileText, Shield, X, ChevronLeft, ChevronRight } from "lucide-react";
+import * as pdfjsLib from 'pdfjs-dist';
+
+// Set up the worker
+pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
 
 const BAATemplate = () => {
   const [selectedPDF, setSelectedPDF] = useState<string | null>(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
+  const [pdfDoc, setPdfDoc] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
 
-  const openPDF = (pdfUrl: string) => {
+  const openPDF = async (pdfUrl: string) => {
     setSelectedPDF(pdfUrl);
+    setCurrentPage(1);
+    setLoading(true);
+    try {
+      const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
+      setPdfDoc(pdf);
+      setTotalPages(pdf.numPages);
+    } catch (error) {
+      console.error('Error loading PDF:', error);
+    }
+    setLoading(false);
   };
 
   const closePDF = () => {
     setSelectedPDF(null);
+    setPdfDoc(null);
+    setCurrentPage(1);
+    setTotalPages(0);
+  };
+
+  const goToNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const goToPreviousPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
+    }
   };
 
   return (
@@ -195,24 +228,57 @@ const BAATemplate = () => {
             onClick={closePDF}
           >
             <div 
-              className="relative w-full h-full max-w-7xl max-h-[95vh] m-4 bg-white rounded-lg shadow-2xl overflow-hidden"
+              className="relative w-full h-full max-w-7xl max-h-[95vh] m-4 bg-white rounded-lg shadow-2xl overflow-hidden flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close Button */}
-              <button
-                onClick={closePDF}
-                className="absolute top-4 right-4 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
-                aria-label="Close PDF viewer"
-              >
-                <X className="w-6 h-6 text-gray-700" />
-              </button>
+              {/* Header with Close Button and Page Navigation */}
+              <div className="flex items-center justify-between p-4 bg-gray-100 border-b border-gray-200">
+                <div className="flex items-center gap-4">
+                  <button
+                    onClick={goToPreviousPage}
+                    disabled={currentPage <= 1}
+                    className="p-2 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed rounded transition-colors"
+                    aria-label="Previous page"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  <span className="text-sm font-medium">
+                    Page {currentPage} of {totalPages}
+                  </span>
+                  <button
+                    onClick={goToNextPage}
+                    disabled={currentPage >= totalPages}
+                    className="p-2 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed rounded transition-colors"
+                    aria-label="Next page"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
+                <button
+                  onClick={closePDF}
+                  className="p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
+                  aria-label="Close PDF viewer"
+                >
+                  <X className="w-6 h-6 text-gray-700" />
+                </button>
+              </div>
 
-              {/* PDF Viewer using Google Docs Viewer */}
-              <iframe
-                src={`https://docs.google.com/gview?url=${encodeURIComponent(window.location.origin + selectedPDF)}&embedded=true`}
-                className="w-full h-full"
-                title="PDF Document Viewer"
-              />
+              {/* PDF Content */}
+              <div className="flex-1 overflow-auto flex items-center justify-center bg-gray-50 p-4">
+                {loading ? (
+                  <div className="text-center">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                    <p className="text-muted-foreground">Loading PDF...</p>
+                  </div>
+                ) : pdfDoc ? (
+                  <PDFPage pdfDoc={pdfDoc} pageNumber={currentPage} />
+                ) : (
+                  <div className="text-center">
+                    <FileText className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
+                    <p className="text-muted-foreground">Unable to load PDF</p>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         )}
@@ -222,5 +288,46 @@ const BAATemplate = () => {
     </div>
   );
 };
+
+// PDF Page Renderer Component
+function PDFPage({ pdfDoc, pageNumber }: { pdfDoc: any; pageNumber: number }) {
+  const [canvas, setCanvas] = useState<HTMLCanvasElement | null>(null);
+
+  useEffect(() => {
+    const renderPage = async () => {
+      if (!pdfDoc) return;
+      
+      const page = await pdfDoc.getPage(pageNumber);
+      const viewport = page.getViewport({ scale: 1.5 });
+      
+      const canvasElement = document.createElement('canvas');
+      const context = canvasElement.getContext('2d');
+      
+      canvasElement.width = viewport.width;
+      canvasElement.height = viewport.height;
+      
+      await page.render({
+        canvasContext: context!,
+        viewport: viewport,
+      }).promise;
+      
+      setCanvas(canvasElement);
+    };
+
+    renderPage();
+  }, [pdfDoc, pageNumber]);
+
+  if (!canvas) {
+    return <div className="text-muted-foreground">Rendering page...</div>;
+  }
+
+  return (
+    <img
+      src={canvas.toDataURL()}
+      alt={`PDF page ${pageNumber}`}
+      className="max-w-full max-h-full object-contain"
+    />
+  );
+}
 
 export default BAATemplate;
