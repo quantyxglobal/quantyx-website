@@ -20,7 +20,7 @@ const steps = [
   },
   {
     step: "Step 2",
-    timing: "Within 2 hours",
+    timing: "Within 6-8 hours",
     title: "Receive Your Estimate",
     desc: "You receive a fixed-price, itemised estimate. No ranges, no 'starting from' — one number, fully broken down.",
   },
@@ -148,7 +148,7 @@ const Pricing = () => {
               </span>
             </h1>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-              No retainers. No hourly billing. No surprises. You receive a complete, itemised estimate within 2 hours of submitting your records — and work begins only after you approve it.
+              No retainers. No hourly billing. No surprises. You receive a complete, itemised estimate within 6-8 hours of submitting your records — and work begins only after you approve it.
             </p>
             <div className="flex flex-wrap justify-center gap-3 mb-10">
               {[
@@ -302,7 +302,7 @@ const Pricing = () => {
           <div className="container mx-auto px-6 text-center">
             <div className="max-w-2xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Get Your Free Estimate in 2 Hours
+                Get Your Free Estimate in 6-8 Hours
               </h2>
               <p className="text-white/80 mb-8">
                 Upload your records and receive a fixed-price, itemised estimate — no commitment required.
