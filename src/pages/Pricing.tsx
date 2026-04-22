@@ -166,7 +166,7 @@ const Pricing = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <Link to="/case-upload">
                 <Button variant="professional" size="lg" style={{ boxShadow: "var(--shadow-elegant)" }} className="bg-primary hover:bg-primary/90 text-white font-semibold">
-                  Upload Case Records
+                  Upload Your Case
                 </Button>
               </Link>
               <Link to="/contact">
@@ -310,7 +310,7 @@ const Pricing = () => {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link to="/case-upload">
                   <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold shadow-lg">
-                    Upload Case Records
+                    Upload Your Case
                   </Button>
                 </Link>
                 <Link to="/contact">
