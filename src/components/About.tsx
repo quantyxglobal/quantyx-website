@@ -5,7 +5,7 @@ import { GraduationCap, Award, BookOpen, Users } from "lucide-react";
 
 const About = () => {
   const credentials = [
-    "Board Certified Internal Medicine",
+    "Liscenced Medical Professionals Internal Medicine",
     "Fellowship in Forensic Medicine",
     "JD - Healthcare Law",
     "25+ Years Clinical Experience"

@@ -265,7 +265,7 @@ const LandingUS = () => {
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <Link to="/case-upload">
                   <Button size="lg" className="bg-white text-primary font-semibold hover:bg-white/90 shadow-lg">
-                    Upload Case Records
+                    Upload Your Case
                   </Button>
                 </Link>
                 <a href="mailto:contact@quantyxg.com">

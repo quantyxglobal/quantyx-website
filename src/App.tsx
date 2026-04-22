@@ -35,6 +35,7 @@ const Pricing = lazy(() => import("./pages/Pricing"));
 const LandingUS = lazy(() => import("./pages/LandingUS"));
 const LandingAustralia = lazy(() => import("./pages/LandingAustralia"));
 const LandingCanada = lazy(() => import("./pages/LandingCanada"));
+const BAATemplate = lazy(() => import("./pages/BAATemplate"));
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -95,6 +96,7 @@ const App = () => (
             <Route path="/us" element={<LandingUS />} />
             <Route path="/australia" element={<LandingAustralia />} />
             <Route path="/canada" element={<LandingCanada />} />
+            <Route path="/baa-template" element={<BAATemplate />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

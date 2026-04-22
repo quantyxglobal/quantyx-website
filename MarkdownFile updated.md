@@ -24,7 +24,7 @@ Upload your PDF files and receive precise cost estimates in seconds. No waiting,
 
 Get Quote View Our Services
 
-Board Certified Medical Expertise Legal Standards
+Liscenced Medical Professionals Medical Expertise Legal Standards
 
 **Services & Samples**
 
@@ -220,7 +220,7 @@ AI-generated content may be incorrect.](data:image/png;base64,iVBORw0KGgoAAAANSU
 
 **About**
 
-**Why Choose Quantix? – Retain in Home Page**
+**Why Choose quantyx? – Retain in Home Page**
 
 A unique blend of efficiency, professionalism, AI-driven accuracy, compliance, and unwavering client focus. Hover over each panel to learn more about our core strengths.
 

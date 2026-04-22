@@ -1,8 +1,8 @@
-# Quantix Global
+# quantyx Global
 
 ## About
 
-Quantix Global is a professional medico-legal services platform powered by AI technology. We provide expert medical chronologies, narrative summaries, and comprehensive legal document analysis to support legal professionals and medical experts.
+quantyx Global is a professional medico-legal services platform powered by AI technology. We provide expert medical chronologies, narrative summaries, and comprehensive legal document analysis to support legal professionals and medical experts.
 
 ## Features
 
@@ -26,7 +26,7 @@ Quantix Global is a professional medico-legal services platform powered by AI te
 git clone <YOUR_GIT_URL>
 
 # Navigate to the project directory
-cd quantix-global
+cd quantyx-global
 
 # Install dependencies
 npm install
@@ -77,4 +77,4 @@ src/
 
 ## License
 
-This project is proprietary software owned by Quantix Global.
+This project is proprietary software owned by quantyx Global.

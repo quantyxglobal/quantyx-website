@@ -1,6 +1,6 @@
-# Quantix Global Website - Integrated Setup Guide
+# quantyx Global Website - Integrated Setup Guide
 
-This guide will help you set up the Quantix Global website with integrated contact forms, quote requests, and S3 file upload functionality using the same AWS configuration as the dashboard.
+This guide will help you set up the quantyx Global website with integrated contact forms, quote requests, and S3 file upload functionality using the same AWS configuration as the dashboard.
 
 ## 🏗️ Architecture Overview
 

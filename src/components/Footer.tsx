@@ -49,7 +49,7 @@ const Footer = () => {
               </Link>
             </div>
             <p className="text-white/90 mb-6 max-w-md text-lg leading-relaxed">
-              Medical Chronologies & Expert Reports analyzed by Physicians — Delivered in 48–72 Hours. HIPAA compliant.
+              Medical Chronologies & Expert Reports analyzed by Physicians — Delivered in 3-5 days. HIPAA compliant.
             </p>
             <div className="space-y-3">
               <div className="flex items-start gap-3 text-white/80 hover:text-white transition-colors">
@@ -141,6 +141,7 @@ const Footer = () => {
               <li><Link to="/professional-ethics" className="hover:text-white transition-colors text-base">Professional Ethics</Link></li>
               <li><Link to="/licensing" className="hover:text-white transition-colors text-base">Licensing</Link></li>
               <li><Link to="/hipaa-pipeda-compliance" className="hover:text-white transition-colors text-base">HIPAA & PIPEDA</Link></li>
+              <li><Link to="/baa-template" className="hover:text-white transition-colors text-base">BAA Template</Link></li>
             </ul>
           </div>
         </div>

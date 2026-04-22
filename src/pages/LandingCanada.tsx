@@ -141,7 +141,7 @@ const LandingCanada = () => {
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <Link to="/case-upload">
                 <Button variant="professional" size="lg" style={{ boxShadow: "var(--shadow-elegant)" }}>
-                  Submit a File
+                  Upload Your Case
                 </Button>
               </Link>
               <a href="mailto:contact@quantyxg.com">
@@ -257,7 +257,7 @@ const LandingCanada = () => {
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <Link to="/case-upload">
                   <Button size="lg" className="bg-white text-primary font-semibold hover:bg-white/90 shadow-lg">
-                    Submit a File
+                    Upload Your Case
                   </Button>
                 </Link>
                 <a href="mailto:contact@quantyxg.com">

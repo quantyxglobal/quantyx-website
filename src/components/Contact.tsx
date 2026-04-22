@@ -191,7 +191,7 @@ const Contact = () => {
               </form>
               
               <p className="text-sm text-muted-foreground text-center">
-                All consultations are confidential and protected by attorney-client privilege.
+                All case information is treated as strictly confidential under our HIPAA-compliant privacy policy and mutual NDA.
               </p>
             </CardContent>
           </Card>

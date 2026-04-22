@@ -59,7 +59,7 @@ const Index = () => {
 
               <h3 className="text-2xl font-bold mb-4 mt-8">Why Choose Quantyx Global for Your Medico-Legal Needs?</h3>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                In complex personal injury and medical malpractice cases, the quality of your medico-legal support directly impacts case outcomes. Our team combines medical expertise with legal acumen to deliver comprehensive analysis that strengthens your litigation strategy. With an average 3–5 day turnaround time, we're the trusted partner for law firms nationwide.
+                In complex personal injury and medical malpractice cases, the quality of your medico-legal support directly impacts case outcomes. Our team combines medical expertise with legal acumen to deliver comprehensive analysis that strengthens your litigation strategy. With an average 3–5 day turnaround time, we're the trusted partner for law firms globally.
               </p>
 
               <h3 className="text-2xl font-bold mb-4 mt-8">Expert Medical Record Review and Analysis</h3>
