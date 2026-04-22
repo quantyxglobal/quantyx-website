@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { FileText, Download, Shield } from "lucide-react";
+import { FileText, Shield } from "lucide-react";
 
 const BAATemplate = () => {
   return (
@@ -55,27 +55,16 @@ const BAATemplate = () => {
                       <p className="text-muted-foreground mb-4">
                         Our HIPAA-compliant Business Associate Agreement template for US law firms. This agreement is required before any protected health information (PHI) is shared with us.
                       </p>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-                        <Download className="w-4 h-4 text-primary" />
-                        <span className="font-medium text-primary">View Only - Download Not Available</span>
-                      </div>
                     </div>
                   </div>
                   
                   <div className="bg-muted/50 rounded-xl p-6 border border-border">
-                    <div className="aspect-[8.5/11] bg-white rounded-lg shadow-inner flex items-center justify-center">
-                      <div className="text-center p-8">
-                        <FileText className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-                        <p className="text-muted-foreground mb-4">
-                          BAA document viewer will be embedded here
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          To request a signed BAA, please contact us at{" "}
-                          <a href="mailto:contact@quantyxg.com" className="text-primary hover:underline">
-                            contact@quantyxg.com
-                          </a>
-                        </p>
-                      </div>
+                    <div className="aspect-[8.5/11] bg-white rounded-lg shadow-inner overflow-hidden">
+                      <iframe
+                        src="/Business Associate Agreement (BAA).pdf"
+                        className="w-full h-full"
+                        title="Business Associate Agreement"
+                      />
                     </div>
                   </div>
                 </div>
@@ -93,27 +82,16 @@ const BAATemplate = () => {
                       <p className="text-muted-foreground mb-4">
                         Our standard Non-Disclosure Agreement signed by all staff members before accessing any client records. This ensures confidentiality and data protection.
                       </p>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-                        <Download className="w-4 h-4 text-primary" />
-                        <span className="font-medium text-primary">View Only - Download Not Available</span>
-                      </div>
                     </div>
                   </div>
                   
                   <div className="bg-muted/50 rounded-xl p-6 border border-border">
-                    <div className="aspect-[8.5/11] bg-white rounded-lg shadow-inner flex items-center justify-center">
-                      <div className="text-center p-8">
-                        <FileText className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-                        <p className="text-muted-foreground mb-4">
-                          NDA document viewer will be embedded here
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          For inquiries about our NDA policy, contact{" "}
-                          <a href="mailto:contact@quantyxg.com" className="text-primary hover:underline">
-                            contact@quantyxg.com
-                          </a>
-                        </p>
-                      </div>
+                    <div className="aspect-[8.5/11] bg-white rounded-lg shadow-inner overflow-hidden">
+                      <iframe
+                        src="/Non-Disclosure Agreement (NDA).pdf"
+                        className="w-full h-full"
+                        title="Non-Disclosure Agreement"
+                      />
                     </div>
                   </div>
                 </div>
@@ -131,27 +109,16 @@ const BAATemplate = () => {
                       <p className="text-muted-foreground mb-4">
                         Our Service Level Agreement outlining turnaround times, quality standards, revision policies, and service commitments for all medico-legal services.
                       </p>
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
-                        <Download className="w-4 h-4 text-primary" />
-                        <span className="font-medium text-primary">View Only - Download Not Available</span>
-                      </div>
                     </div>
                   </div>
                   
                   <div className="bg-muted/50 rounded-xl p-6 border border-border">
-                    <div className="aspect-[8.5/11] bg-white rounded-lg shadow-inner flex items-center justify-center">
-                      <div className="text-center p-8">
-                        <FileText className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-                        <p className="text-muted-foreground mb-4">
-                          SLA document viewer will be embedded here
-                        </p>
-                        <p className="text-sm text-muted-foreground">
-                          For questions about our service commitments, contact{" "}
-                          <a href="mailto:contact@quantyxg.com" className="text-primary hover:underline">
-                            contact@quantyxg.com
-                          </a>
-                        </p>
-                      </div>
+                    <div className="aspect-[8.5/11] bg-white rounded-lg shadow-inner overflow-hidden">
+                      <iframe
+                        src="/Service Level Agreement (SLA).pdf"
+                        className="w-full h-full"
+                        title="Service Level Agreement"
+                      />
                     </div>
                   </div>
                 </div>
