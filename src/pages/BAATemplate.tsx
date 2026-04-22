@@ -1,9 +1,22 @@
+"use client"
+
+import { useState } from "react"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { FileText, Shield } from "lucide-react";
+import { FileText, Shield, X } from "lucide-react";
 
 const BAATemplate = () => {
+  const [selectedPDF, setSelectedPDF] = useState<string | null>(null);
+
+  const openPDF = (pdfUrl: string) => {
+    setSelectedPDF(pdfUrl);
+  };
+
+  const closePDF = () => {
+    setSelectedPDF(null);
+  };
+
   return (
     <div className="min-h-screen">
       <SEO
@@ -63,16 +76,14 @@ const BAATemplate = () => {
                       <FileText className="w-16 h-16 text-primary mx-auto mb-4" />
                       <h3 className="text-lg font-semibold mb-2">Business Associate Agreement</h3>
                       <p className="text-muted-foreground mb-4 text-sm">
-                        Click below to view the BAA document in a new tab
+                        Click below to view the BAA document
                       </p>
-                      <a
-                        href="/Business%20Associate%20Agreement%20(BAA).pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        onClick={() => openPDF("/Business%20Associate%20Agreement%20(BAA).pdf")}
                         className="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
                       >
                         View BAA Document
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -98,16 +109,14 @@ const BAATemplate = () => {
                       <FileText className="w-16 h-16 text-accent mx-auto mb-4" />
                       <h3 className="text-lg font-semibold mb-2">Non-Disclosure Agreement</h3>
                       <p className="text-muted-foreground mb-4 text-sm">
-                        Click below to view the NDA document in a new tab
+                        Click below to view the NDA document
                       </p>
-                      <a
-                        href="/Non-Disclosure%20Agreement%20(NDA).pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        onClick={() => openPDF("/Non-Disclosure%20Agreement%20(NDA).pdf")}
                         className="inline-block px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-colors"
                       >
                         View NDA Document
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -133,16 +142,14 @@ const BAATemplate = () => {
                       <FileText className="w-16 h-16 text-primary mx-auto mb-4" />
                       <h3 className="text-lg font-semibold mb-2">Service Level Agreement</h3>
                       <p className="text-muted-foreground mb-4 text-sm">
-                        Click below to view the SLA document in a new tab
+                        Click below to view the SLA document
                       </p>
-                      <a
-                        href="/Service%20Level%20Agreement%20(SLA).pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <button
+                        onClick={() => openPDF("/Service%20Level%20Agreement%20(SLA).pdf")}
                         className="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
                       >
                         View SLA Document
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -180,6 +187,52 @@ const BAATemplate = () => {
             </p>
           </div>
         </section>
+
+        {/* PDF Viewer Modal */}
+        {selectedPDF && (
+          <div 
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+            onClick={closePDF}
+          >
+            <div 
+              className="relative w-full h-full max-w-7xl max-h-[95vh] m-4 bg-white rounded-lg shadow-2xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Close Button */}
+              <button
+                onClick={closePDF}
+                className="absolute top-4 right-4 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
+                aria-label="Close PDF viewer"
+              >
+                <X className="w-6 h-6 text-gray-700" />
+              </button>
+
+              {/* PDF Viewer */}
+              <object
+                data={selectedPDF}
+                type="application/pdf"
+                className="w-full h-full"
+                aria-label="PDF Document Viewer"
+              >
+                <div className="flex items-center justify-center h-full p-8 text-center">
+                  <div>
+                    <FileText className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
+                    <p className="text-muted-foreground mb-4">
+                      Your browser doesn't support PDF viewing.
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Please contact us at{" "}
+                      <a href="mailto:contact@quantyxg.com" className="text-primary hover:underline">
+                        contact@quantyxg.com
+                      </a>
+                      {" "}to request a copy.
+                    </p>
+                  </div>
+                </div>
+              </object>
+            </div>
+          </div>
+        )}
 
       </main>
       <Footer />
