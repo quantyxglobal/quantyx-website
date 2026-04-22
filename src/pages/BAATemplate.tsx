@@ -207,12 +207,11 @@ const BAATemplate = () => {
                 <X className="w-6 h-6 text-gray-700" />
               </button>
 
-              {/* PDF Viewer */}
+              {/* PDF Viewer using Google Docs Viewer */}
               <iframe
-                src={selectedPDF}
+                src={`https://docs.google.com/gview?url=${encodeURIComponent(window.location.origin + selectedPDF)}&embedded=true`}
                 className="w-full h-full"
                 title="PDF Document Viewer"
-                sandbox="allow-same-origin allow-scripts"
               />
             </div>
           </div>
