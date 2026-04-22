@@ -213,6 +213,7 @@ const BAATemplate = () => {
                 type="application/pdf"
                 className="w-full h-full"
                 aria-label="PDF Document Viewer"
+                sandbox="allow-same-origin"
               />
             </div>
           </div>
