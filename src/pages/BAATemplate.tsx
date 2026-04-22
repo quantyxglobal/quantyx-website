@@ -61,10 +61,20 @@ const BAATemplate = () => {
                   <div className="bg-muted/50 rounded-xl p-6 border border-border">
                     <div className="aspect-[8.5/11] bg-white rounded-lg shadow-inner overflow-hidden">
                       <iframe
-                        src="/Business Associate Agreement (BAA).pdf"
+                        src="/Business%20Associate%20Agreement%20(BAA).pdf"
                         className="w-full h-full"
                         title="Business Associate Agreement"
                       />
+                    </div>
+                    <div className="mt-4 text-center">
+                      <a
+                        href="/Business%20Associate%20Agreement%20(BAA).pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline text-sm font-medium"
+                      >
+                        Open BAA in New Tab →
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -88,10 +98,20 @@ const BAATemplate = () => {
                   <div className="bg-muted/50 rounded-xl p-6 border border-border">
                     <div className="aspect-[8.5/11] bg-white rounded-lg shadow-inner overflow-hidden">
                       <iframe
-                        src="/Non-Disclosure Agreement (NDA).pdf"
+                        src="/Non-Disclosure%20Agreement%20(NDA).pdf"
                         className="w-full h-full"
                         title="Non-Disclosure Agreement"
                       />
+                    </div>
+                    <div className="mt-4 text-center">
+                      <a
+                        href="/Non-Disclosure%20Agreement%20(NDA).pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline text-sm font-medium"
+                      >
+                        Open NDA in New Tab →
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -115,10 +135,20 @@ const BAATemplate = () => {
                   <div className="bg-muted/50 rounded-xl p-6 border border-border">
                     <div className="aspect-[8.5/11] bg-white rounded-lg shadow-inner overflow-hidden">
                       <iframe
-                        src="/Service Level Agreement (SLA).pdf"
+                        src="/Service%20Level%20Agreement%20(SLA).pdf"
                         className="w-full h-full"
                         title="Service Level Agreement"
                       />
+                    </div>
+                    <div className="mt-4 text-center">
+                      <a
+                        href="/Service%20Level%20Agreement%20(SLA).pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline text-sm font-medium"
+                      >
+                        Open SLA in New Tab →
+                      </a>
                     </div>
                   </div>
                 </div>
