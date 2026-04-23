@@ -4,7 +4,8 @@ import { useState } from "react"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { FileText, Shield, X } from "lucide-react";
+import { PDFViewer } from "@/components/PDFViewer";
+import { FileText, Shield } from "lucide-react";
 
 const BAATemplate = () => {
   const [selectedPDF, setSelectedPDF] = useState<string | null>(null);
@@ -79,7 +80,7 @@ const BAATemplate = () => {
                         Click below to view the BAA document
                       </p>
                       <button
-                        onClick={() => openPDF("/Business%20Associate%20Agreement%20(BAA).pdf")}
+                        onClick={() => openPDF("/Business Associate Agreement (BAA).pdf")}
                         className="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
                       >
                         View BAA Document
@@ -112,7 +113,7 @@ const BAATemplate = () => {
                         Click below to view the NDA document
                       </p>
                       <button
-                        onClick={() => openPDF("/Non-Disclosure%20Agreement%20(NDA).pdf")}
+                        onClick={() => openPDF("/Non-Disclosure Agreement (NDA).pdf")}
                         className="inline-block px-6 py-3 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition-colors"
                       >
                         View NDA Document
@@ -145,7 +146,7 @@ const BAATemplate = () => {
                         Click below to view the SLA document
                       </p>
                       <button
-                        onClick={() => openPDF("/Service%20Level%20Agreement%20(SLA).pdf")}
+                        onClick={() => openPDF("/Service Level Agreement (SLA).pdf")}
                         className="inline-block px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors"
                       >
                         View SLA Document
@@ -190,44 +191,7 @@ const BAATemplate = () => {
 
         {/* PDF Viewer Modal */}
         {selectedPDF && (
-          <div 
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
-            onClick={closePDF}
-          >
-            <div 
-              className="relative w-full h-full max-w-5xl max-h-[90vh] m-4 bg-gray-900 rounded-lg shadow-2xl overflow-hidden flex flex-col"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Close Button */}
-              <button
-                onClick={closePDF}
-                className="absolute top-4 right-4 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
-                aria-label="Close PDF viewer"
-              >
-                <X className="w-6 h-6 text-gray-700" />
-              </button>
-
-              {/* PDF Content - Simple Message */}
-              <div className="flex-1 overflow-auto flex items-center justify-center p-8">
-                <div className="text-center max-w-md">
-                  <FileText className="w-20 h-20 text-white mx-auto mb-6" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Document Available</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    This document is available for review. To receive a copy of our signed agreements, please contact us directly.
-                  </p>
-                  <a
-                    href="mailto:contact@quantyxg.com?subject=Request for Legal Agreements"
-                    className="inline-block px-8 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors shadow-lg"
-                  >
-                    Request Document Copy
-                  </a>
-                  <p className="text-sm text-gray-400 mt-6">
-                    We'll send you the executed agreement within 1 business day
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <PDFViewer pdfUrl={selectedPDF} onClose={closePDF} />
         )}
 
       </main>

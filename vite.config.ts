@@ -16,6 +16,7 @@ export default defineConfig(() => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  assetsInclude: ['**/*.pdf'],
   build: {
     rollupOptions: {
       output: {
@@ -37,5 +38,6 @@ export default defineConfig(() => ({
   // Optimize dependencies
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-router-dom', '@tanstack/react-query'],
+    exclude: ['pdfjs-dist'],
   },
 }));
