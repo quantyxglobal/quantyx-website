@@ -1,53 +1,20 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
-import { FileText, Shield, X, ChevronLeft, ChevronRight } from "lucide-react";
-import * as pdfjsLib from 'pdfjs-dist';
-
-// Set up the worker
-pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+import { FileText, Shield, X } from "lucide-react";
 
 const BAATemplate = () => {
   const [selectedPDF, setSelectedPDF] = useState<string | null>(null);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(0);
-  const [pdfDoc, setPdfDoc] = useState<any>(null);
-  const [loading, setLoading] = useState(false);
 
-  const openPDF = async (pdfUrl: string) => {
+  const openPDF = (pdfUrl: string) => {
     setSelectedPDF(pdfUrl);
-    setCurrentPage(1);
-    setLoading(true);
-    try {
-      const pdf = await pdfjsLib.getDocument(pdfUrl).promise;
-      setPdfDoc(pdf);
-      setTotalPages(pdf.numPages);
-    } catch (error) {
-      console.error('Error loading PDF:', error);
-    }
-    setLoading(false);
   };
 
   const closePDF = () => {
     setSelectedPDF(null);
-    setPdfDoc(null);
-    setCurrentPage(1);
-    setTotalPages(0);
-  };
-
-  const goToNextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
-  const goToPreviousPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
   };
 
   return (
@@ -224,60 +191,40 @@ const BAATemplate = () => {
         {/* PDF Viewer Modal */}
         {selectedPDF && (
           <div 
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
             onClick={closePDF}
           >
             <div 
-              className="relative w-full h-full max-w-7xl max-h-[95vh] m-4 bg-white rounded-lg shadow-2xl overflow-hidden flex flex-col"
+              className="relative w-full h-full max-w-5xl max-h-[90vh] m-4 bg-gray-900 rounded-lg shadow-2xl overflow-hidden flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Header with Close Button and Page Navigation */}
-              <div className="flex items-center justify-between p-4 bg-gray-100 border-b border-gray-200">
-                <div className="flex items-center gap-4">
-                  <button
-                    onClick={goToPreviousPage}
-                    disabled={currentPage <= 1}
-                    className="p-2 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed rounded transition-colors"
-                    aria-label="Previous page"
-                  >
-                    <ChevronLeft className="w-5 h-5" />
-                  </button>
-                  <span className="text-sm font-medium">
-                    Page {currentPage} of {totalPages}
-                  </span>
-                  <button
-                    onClick={goToNextPage}
-                    disabled={currentPage >= totalPages}
-                    className="p-2 hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed rounded transition-colors"
-                    aria-label="Next page"
-                  >
-                    <ChevronRight className="w-5 h-5" />
-                  </button>
-                </div>
-                <button
-                  onClick={closePDF}
-                  className="p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
-                  aria-label="Close PDF viewer"
-                >
-                  <X className="w-6 h-6 text-gray-700" />
-                </button>
-              </div>
+              {/* Close Button */}
+              <button
+                onClick={closePDF}
+                className="absolute top-4 right-4 z-10 p-2 bg-white rounded-full shadow-lg hover:bg-gray-100 transition-colors"
+                aria-label="Close PDF viewer"
+              >
+                <X className="w-6 h-6 text-gray-700" />
+              </button>
 
-              {/* PDF Content */}
-              <div className="flex-1 overflow-auto flex items-center justify-center bg-gray-50 p-4">
-                {loading ? (
-                  <div className="text-center">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-                    <p className="text-muted-foreground">Loading PDF...</p>
-                  </div>
-                ) : pdfDoc ? (
-                  <PDFPage pdfDoc={pdfDoc} pageNumber={currentPage} />
-                ) : (
-                  <div className="text-center">
-                    <FileText className="w-16 h-16 text-muted-foreground mx-auto mb-4" />
-                    <p className="text-muted-foreground">Unable to load PDF</p>
-                  </div>
-                )}
+              {/* PDF Content - Simple Message */}
+              <div className="flex-1 overflow-auto flex items-center justify-center p-8">
+                <div className="text-center max-w-md">
+                  <FileText className="w-20 h-20 text-white mx-auto mb-6" />
+                  <h3 className="text-2xl font-bold text-white mb-4">Document Available</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    This document is available for review. To receive a copy of our signed agreements, please contact us directly.
+                  </p>
+                  <a
+                    href="mailto:contact@quantyxg.com?subject=Request for Legal Agreements"
+                    className="inline-block px-8 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors shadow-lg"
+                  >
+                    Request Document Copy
+                  </a>
+                  <p className="text-sm text-gray-400 mt-6">
+                    We'll send you the executed agreement within 1 business day
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -288,46 +235,5 @@ const BAATemplate = () => {
     </div>
   );
 };
-
-// PDF Page Renderer Component
-function PDFPage({ pdfDoc, pageNumber }: { pdfDoc: any; pageNumber: number }) {
-  const [canvas, setCanvas] = useState<HTMLCanvasElement | null>(null);
-
-  useEffect(() => {
-    const renderPage = async () => {
-      if (!pdfDoc) return;
-      
-      const page = await pdfDoc.getPage(pageNumber);
-      const viewport = page.getViewport({ scale: 1.5 });
-      
-      const canvasElement = document.createElement('canvas');
-      const context = canvasElement.getContext('2d');
-      
-      canvasElement.width = viewport.width;
-      canvasElement.height = viewport.height;
-      
-      await page.render({
-        canvasContext: context!,
-        viewport: viewport,
-      }).promise;
-      
-      setCanvas(canvasElement);
-    };
-
-    renderPage();
-  }, [pdfDoc, pageNumber]);
-
-  if (!canvas) {
-    return <div className="text-muted-foreground">Rendering page...</div>;
-  }
-
-  return (
-    <img
-      src={canvas.toDataURL()}
-      alt={`PDF page ${pageNumber}`}
-      className="max-w-full max-h-full object-contain"
-    />
-  );
-}
 
 export default BAATemplate;
