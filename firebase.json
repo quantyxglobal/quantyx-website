@@ -9,6 +9,23 @@
       "**/*.test.*",
       "**/test/**"
     ],
+    "redirects": [
+      {
+        "source": "https://quantyxg.com",
+        "destination": "https://www.quantyxg.com",
+        "type": 302
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "**/*!([^.])@(.|)!(.@(css|gif|ico|jpg|jpeg|js|png|txt|svg|woff|woff2|ttf|map|json))$([A-z]\\{1\\})/:**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/<*>",
+        "destination": "/index.html"
+      }
+    ],
     "frameworksBackend": {
       "region": "us-east4",
       "memory": "1GiB",
