@@ -6,7 +6,7 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
+# Install ALL dependencies (including dev dependencies for build)
 RUN npm ci
 
 # Copy source code
@@ -20,17 +20,24 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-# Install serve to run the static files
-RUN npm install -g serve
+# Copy package files
+COPY package*.json ./
+
+# Install only production dependencies + express
+RUN npm ci --omit=dev && npm install express
 
 # Copy built assets from builder stage
 COPY --from=builder /app/dist ./dist
 
+# Copy server file
+COPY server.js ./
+
 # Expose port 8080 (required by Cloud Run)
 EXPOSE 8080
 
-# Set PORT environment variable
+# Set environment variables
 ENV PORT=8080
+ENV NODE_ENV=production
 
-# Start the server on the PORT defined by Cloud Run
-CMD ["sh", "-c", "serve -s dist -l $PORT"]
+# Start the Node.js server
+CMD ["node", "server.js"]
