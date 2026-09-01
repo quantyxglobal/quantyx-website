@@ -157,7 +157,7 @@ const LandingUS = () => {
             <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
               <a href="tel:+15129314563" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Phone className="w-4 h-4" />
-                +1 (512) 931-4563
+                +1 816-266-2122
               </a>
               <a href="mailto:contact@quantyxg.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail className="w-4 h-4" />
@@ -277,7 +277,7 @@ const LandingUS = () => {
               <div className="flex flex-wrap justify-center gap-6 text-sm text-white/80">
                 <a href="tel:+15129314563" className="flex items-center gap-2 hover:text-white transition-colors">
                   <Phone className="w-4 h-4" />
-                  +1 (512) 931-4563
+                  +1 816-266-2122
                 </a>
                 <a href="mailto:contact@quantyxg.com" className="flex items-center gap-2 hover:text-white transition-colors">
                   <Mail className="w-4 h-4" />

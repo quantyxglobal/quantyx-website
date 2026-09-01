@@ -464,7 +464,7 @@ const HipaaPipedaCompliance = () => {
                 <p>
                   <a href="tel:+917075184488" className="text-primary hover:underline">+91 70751 84488</a> (India) &nbsp;|&nbsp;
                   <a href="tel:+61452257129" className="text-primary hover:underline">+61 452 257 129</a> (Australia) &nbsp;|&nbsp;
-                  <a href="tel:+15129314563" className="text-primary hover:underline">+1 (512) 931-4563</a> (USA)
+                  <a href="tel:+15129314563" className="text-primary hover:underline">+1 816-266-2122</a> (USA)
                 </p>
               </div>
             </div>

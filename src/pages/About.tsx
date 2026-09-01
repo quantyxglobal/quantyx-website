@@ -48,7 +48,7 @@ const About = () => {
     },
     {
       name: "Rebecca",
-      role: "Client Relationship Manager",
+      role: "Client Relations Manager",
       image: "/pics/CRM.png"
     }
   ];
