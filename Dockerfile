@@ -23,8 +23,8 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install only production dependencies + express
-RUN npm ci --omit=dev && npm install express
+# Install only production dependencies (express is now in package.json)
+RUN npm ci --omit=dev
 
 # Copy built assets from builder stage
 COPY --from=builder /app/dist ./dist

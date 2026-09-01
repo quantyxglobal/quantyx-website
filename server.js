@@ -1,6 +1,4 @@
 import express from 'express';
-import { createServer as createViteServer } from 'vite';
-import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -13,6 +11,7 @@ async function createServer() {
 
   if (!isProduction) {
     // Development mode - use Vite dev server
+    const { createServer: createViteServer } = await import('vite');
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa'
@@ -20,7 +19,10 @@ async function createServer() {
     app.use(vite.middlewares);
   } else {
     // Production mode - serve static files
-    app.use(express.static(path.join(__dirname, 'dist')));
+    app.use(express.static(path.join(__dirname, 'dist'), {
+      maxAge: '1y',
+      immutable: true
+    }));
     
     // SPA fallback - serve index.html for all routes
     app.get('*', (req, res) => {
@@ -29,12 +31,13 @@ async function createServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running on port ${PORT}`);
-    console.log(`Environment: ${isProduction ? 'production' : 'development'}`);
+    console.log(`✅ Server running on port ${PORT}`);
+    console.log(`📦 Environment: ${isProduction ? 'production' : 'development'}`);
+    console.log(`🚀 Ready to serve requests`);
   });
 }
 
 createServer().catch(err => {
-  console.error('Failed to start server:', err);
+  console.error('❌ Failed to start server:', err);
   process.exit(1);
 });
