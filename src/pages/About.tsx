@@ -45,6 +45,11 @@ const About = () => {
       name: "S. Megha Shyam Raju",
       role: "Chief Technical Officer",
       image: "/pics/CTO.png"
+    },
+    {
+      name: "Rebecca",
+      role: "Client Relationship Manager",
+      image: "/pics/CRM.png"
     }
   ];
 
@@ -164,8 +169,9 @@ const About = () => {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
-              {team.map((member, index) => (
+            {/* First Row - 3 cards */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto mb-12">
+              {team.slice(0, 3).map((member, index) => (
                 <Card key={index} className="text-center hover:shadow-xl transition-all duration-500 border-primary/20 bg-card/90 backdrop-blur-sm hover:bg-card/95 shadow-elegant relative overflow-hidden group w-full">
                   {/* Card Background Design */}
                   <div className="absolute inset-0 opacity-30 group-hover:opacity-40 transition-opacity duration-500">
@@ -205,6 +211,52 @@ const About = () => {
                   </CardHeader>
                 </Card>
               ))}
+            </div>
+            
+            {/* Second Row - 1 card centered */}
+            <div className="flex justify-center max-w-6xl mx-auto">
+              <div className="w-full md:w-1/2 lg:w-1/3">
+                {team.slice(3).map((member, index) => (
+                  <Card key={index + 3} className="text-center hover:shadow-xl transition-all duration-500 border-primary/20 bg-card/90 backdrop-blur-sm hover:bg-card/95 shadow-elegant relative overflow-hidden group w-full">
+                    {/* Card Background Design */}
+                    <div className="absolute inset-0 opacity-30 group-hover:opacity-40 transition-opacity duration-500">
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-primary/20 to-transparent rounded-full blur-2xl" />
+                      <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-accent/15 to-transparent rounded-full blur-xl" />
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-professional/10 rounded-full blur-3xl" />
+                    </div>
+                    
+                    {/* Gradient Border Effect */}
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/20 via-transparent to-accent/20 p-[1px] group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-500">
+                      <div className="w-full h-full bg-card/95 rounded-lg" />
+                    </div>
+                    
+                    <CardHeader className="p-8 relative z-10">
+                      <div className="w-32 h-32 rounded-full mx-auto mb-6 overflow-hidden border-4 border-primary/30 shadow-glow relative group-hover:border-primary/50 transition-all duration-500">
+                        {/* Photo Border Glow Effect */}
+                        <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 blur-sm group-hover:from-primary/30 group-hover:to-accent/30 transition-all duration-500" />
+                        <img 
+                          src={member.image} 
+                          alt={member.name}
+                          className="w-full h-full object-cover relative z-10 group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      
+                      <CardTitle className="text-2xl mb-2 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent group-hover:from-primary group-hover:via-primary-glow group-hover:to-primary transition-all duration-500">
+                        {member.name}
+                      </CardTitle>
+                      
+                      <div className="text-primary font-semibold text-lg relative">
+                        <CardDescription className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent group-hover:from-accent group-hover:to-primary transition-all duration-500">
+                          {member.role}
+                        </CardDescription>
+                        
+                        {/* Decorative underline */}
+                        <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-accent mx-auto mt-3 rounded-full group-hover:w-24 group-hover:from-accent group-hover:to-primary-glow transition-all duration-500" />
+                      </div>
+                    </CardHeader>
+                  </Card>
+                ))}
+              </div>
             </div>
           </div>
         </section>
