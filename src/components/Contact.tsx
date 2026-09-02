@@ -40,18 +40,30 @@ const Contact = () => {
     try {
       // Map the form data to match the API expectations
       const contactData = {
-        caseName: `${formData.firstName} ${formData.lastName} - Consultation`,
-        contactPersonName: `${formData.firstName} ${formData.lastName}`,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
         email: formData.email,
         phone: formData.phone,
         company: formData.company || 'Not provided',
         country: 'Not provided',
         services: formData.services,
         message: formData.message,
-        files: []
+        uploadedFiles: []
       };
       
-      await submitContactForm(contactData);
+      // Submit to dashboard API directly (not through the submitContactForm wrapper)
+      const response = await fetch('https://dashboard.quantyxg.com/api/website/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contactData),
+      });
+      
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to submit consultation request');
+      }
       toast.success('Consultation request submitted successfully! We will contact you within 24 hours.');
       
       // Reset form
