@@ -64,9 +64,9 @@ const Contact = () => {
       title: "Phone",
       content: (
         <div className="space-y-1">
-          <div>+91 70751 84488 <span className="text-xs text-muted-foreground">(India)</span></div>
-          <div>+61 452 257 129 <span className="text-xs text-muted-foreground">(Australia)</span></div>
           <div>+1 816-266-2122 <span className="text-xs text-muted-foreground">(USA)</span></div>
+          <div>+61 452 257 129 <span className="text-xs text-muted-foreground">(Australia)</span></div>
+          <div>+91 70751 84488 <span className="text-xs text-muted-foreground">(India)</span></div>
         </div>
       ),
       subtitle: "Available for consultations"

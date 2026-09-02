@@ -55,9 +55,9 @@ const Footer = () => {
               <div className="flex items-start gap-3 text-white/80 hover:text-white transition-colors">
                 <Phone className="w-5 h-5 mt-1" />
                 <div className="space-y-1">
-                  <div className="text-base">+91 70751 84488 <span className="text-sm text-white/60">(India)</span></div>
-                  <div className="text-base">+61 452 257 129 <span className="text-sm text-white/60">(Australia)</span></div>
                   <div className="text-base">+1 816-266-2122 <span className="text-sm text-white/60">(USA)</span></div>
+                  <div className="text-base">+61 452 257 129 <span className="text-sm text-white/60">(Australia)</span></div>
+                  <div className="text-base">+91 70751 84488 <span className="text-sm text-white/60">(India)</span></div>
                 </div>
               </div>
               <div className="flex items-center gap-3 text-white/80 hover:text-white transition-colors">

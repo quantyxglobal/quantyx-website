@@ -271,6 +271,18 @@ const Contact = () => {
                       </div>
 
                       <div className="space-y-2">
+                        <Label htmlFor="phone">Phone Number *</Label>
+                        <Input
+                          id="phone"
+                          type="tel"
+                          placeholder="+1 (555) 123-4567"
+                          value={formData.phone}
+                          onChange={(e) => setFormData(p => ({ ...p, phone: e.target.value }))}
+                          required
+                        />
+                      </div>
+
+                      <div className="space-y-2">
                         <Label htmlFor="company">Law Firm / Organisation *</Label>
                         <Input
                           id="company"

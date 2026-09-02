@@ -113,9 +113,9 @@ const TermsOfService = () => {
                   </p>
                   <p className="text-muted-foreground leading-relaxed mt-4">
                     Email: <a href="mailto:contact@quantyxg.com" className="text-primary hover:underline">contact@quantyxg.com</a><br />
-                    Phone: <a href="tel:+917075184488" className="text-primary hover:underline">+91 70751 84488</a> (India) &nbsp;|&nbsp;
+                    Phone: <a href="tel:+15129314563" className="text-primary hover:underline">+1 816-266-2122</a> (USA) &nbsp;|&nbsp;
                     <a href="tel:+61452257129" className="text-primary hover:underline">+61 452 257 129</a> (Australia) &nbsp;|&nbsp;
-                    <a href="tel:+15129314563" className="text-primary hover:underline">+1 816-266-2122</a> (USA)<br />
+                    <a href="tel:+917075184488" className="text-primary hover:underline">+91 70751 84488</a> (India)<br />
                     Address: #204, B Block, Old Grand World Road, Smart City Tirupati, Andhra Pradesh – 517501, India
                   </p>
                 </div>
