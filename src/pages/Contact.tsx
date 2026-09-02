@@ -111,10 +111,19 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Check required fields
     if (!formData.caseName || !formData.contactPersonName || !formData.email || !formData.company || !formData.country) {
       setError("Please fill in all required fields");
       return;
     }
+    
+    // Check state if country requires it
+    const availableStates = statesByCountry[formData.country] || [];
+    if (availableStates.length > 0 && !formData.state) {
+      setError("Please select a state/province");
+      return;
+    }
+    
     if (uploadedFiles.length === 0) {
       setError("Please upload at least one document");
       return;
@@ -367,6 +376,7 @@ const Contact = () => {
                           <input
                             id="contact-file-upload"
                             type="file"
+                            accept="*/*"
                             multiple
                             className="hidden"
                             onChange={handleFileUpload}

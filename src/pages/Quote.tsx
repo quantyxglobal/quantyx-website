@@ -327,6 +327,7 @@ const Quote = () => {
                       <input
                         id="file-upload"
                         type="file"
+                        accept="*/*"
                         multiple
                         className="hidden"
                         onChange={handleFileUpload}
