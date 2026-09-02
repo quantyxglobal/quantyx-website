@@ -38,7 +38,20 @@ const Contact = () => {
     setIsSubmitting(true);
     
     try {
-      await submitContactForm(formData);
+      // Map the form data to match the API expectations
+      const contactData = {
+        caseName: `${formData.firstName} ${formData.lastName} - Consultation`,
+        contactPersonName: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company || 'Not provided',
+        country: 'Not provided',
+        services: formData.services,
+        message: formData.message,
+        files: []
+      };
+      
+      await submitContactForm(contactData);
       toast.success('Consultation request submitted successfully! We will contact you within 24 hours.');
       
       // Reset form
