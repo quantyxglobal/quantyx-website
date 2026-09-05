@@ -29,9 +29,7 @@ export default defineConfig(() => ({
         '/ai-best-practices'
       ],
       changefreq: 'weekly',
-      priority: 0.8,
-      lastmod: new Date(),
-      robots: [] // Empty array to disable robots.txt updates
+      priority: 0.8
     })
   ],
   resolve: {
