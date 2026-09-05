@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import sitemap from "vite-plugin-sitemap";
 
 // https://vitejs.dev/config/
 export default defineConfig(() => ({
@@ -11,28 +10,6 @@ export default defineConfig(() => ({
   },
   plugins: [
     react(),
-    sitemap({
-      hostname: 'https://www.quantyxg.com',
-      dynamicRoutes: [
-        '/',
-        '/services',
-        '/services/medical-chronology',
-        '/services/narrative-summary',
-        '/services/demand-letters',
-        '/services/medical-opinion',
-        '/pricing',
-        '/about',
-        '/case-upload',
-        '/hipaa-pipeda-compliance',
-        '/quote',
-        '/contact',
-        '/ai-best-practices'
-      ],
-      changefreq: 'weekly',
-      priority: 0.8,
-      readable: true,
-      exclude: ['/robots.txt'] // Don't try to update robots.txt
-    })
   ],
   resolve: {
     alias: {
