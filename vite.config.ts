@@ -29,7 +29,9 @@ export default defineConfig(() => ({
         '/ai-best-practices'
       ],
       changefreq: 'weekly',
-      priority: 0.8
+      priority: 0.8,
+      readable: true,
+      exclude: ['/robots.txt'] // Don't try to update robots.txt
     })
   ],
   resolve: {
