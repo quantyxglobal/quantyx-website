@@ -31,7 +31,7 @@ export default defineConfig(() => ({
       changefreq: 'weekly',
       priority: 0.8,
       lastmod: new Date(),
-      robots: false // Disable robots.txt generation
+      robots: [] // Empty array to disable robots.txt updates
     })
   ],
   resolve: {
