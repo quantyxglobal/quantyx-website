@@ -13,7 +13,7 @@ export default defineConfig(() => ({
     react(),
     sitemap({
       hostname: 'https://www.quantyxg.com',
-      routes: [
+      dynamicRoutes: [
         '/',
         '/services',
         '/pricing',
@@ -23,7 +23,10 @@ export default defineConfig(() => ({
         '/quote',
         '/contact',
         '/ai-best-practices'
-      ]
+      ],
+      changefreq: 'weekly',
+      priority: 0.8,
+      lastmod: new Date()
     })
   ],
   resolve: {
