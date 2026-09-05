@@ -19,6 +19,8 @@ const MedicalOpinions = lazy(() => import("./pages/services/MedicalOpinions"));
 const NarrativeSummary = lazy(() => import("./pages/services/NarrativeSummary"));
 const MedicalExpenses = lazy(() => import("./pages/services/MedicalExpenses"));
 const DemandLetter = lazy(() => import("./pages/services/DemandLetter"));
+const DemandLetters = lazy(() => import("./pages/services/DemandLetters"));
+const MedicalOpinion = lazy(() => import("./pages/services/MedicalOpinion"));
 const HyperlinksBookmarks = lazy(() => import("./pages/services/HyperlinksBookmarks"));
 
 // Lazy load policy pages
@@ -81,9 +83,11 @@ const App = () => (
             <Route path="/quote" element={<Quote />} />
             <Route path="/services/medical-chronology" element={<MedicalChronology />} />
             <Route path="/services/medical-opinions" element={<MedicalOpinions />} />
+            <Route path="/services/medical-opinion" element={<MedicalOpinion />} />
             <Route path="/services/narrative-summary" element={<NarrativeSummary />} />
             <Route path="/services/medical-expenses" element={<MedicalExpenses />} />
             <Route path="/services/demand-letter" element={<DemandLetter />} />
+            <Route path="/services/demand-letters" element={<DemandLetters />} />
             <Route path="/services/hyperlinks-bookmarks" element={<HyperlinksBookmarks />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />

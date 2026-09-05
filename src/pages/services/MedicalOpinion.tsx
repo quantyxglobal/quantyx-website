@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import { FileText, Clock, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function NarrativeSummary() {
+export default function MedicalOpinion() {
   return (
     <>
       <Helmet>
-        <title>Narrative Summary Services for Attorneys USA, Canada & Australia | Quantyx Global</title>
+        <title>Expert Medical Opinion Services for Attorneys USA, Canada & Australia | Quantyx Global</title>
         <meta 
           name="description" 
-          content="Professional narrative summary services for attorneys and law firms in USA, Canada, and Australia. Transform medical records into clear, concise narrative summaries." 
+          content="Professional expert medical opinion services for attorneys and law firms in USA, Canada, and Australia. Independent medical review and expert opinions for legal cases." 
         />
       </Helmet>
 
@@ -25,10 +25,10 @@ export default function NarrativeSummary() {
                 Core Service
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                Narrative Summary Services
+                Expert Medical Opinion Services
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Clear, comprehensive medical record summaries for attorneys in USA, Canada, and Australia
+                Independent medical review and expert opinions for attorneys in USA, Canada, and Australia
               </p>
             </div>
           </div>
@@ -39,19 +39,19 @@ export default function NarrativeSummary() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="bg-card rounded-2xl shadow-elegant p-8 md:p-12 mb-8">
-                <h2 className="text-2xl font-bold mb-6">What is a Narrative Summary?</h2>
+                <h2 className="text-2xl font-bold mb-6">What are Expert Medical Opinion Services?</h2>
                 <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
                   <p>
-                    A narrative summary is a concise, readable document that synthesizes voluminous medical records into a coherent story of the patient's medical journey. Our narrative summary services help attorneys in USA, Canada, and Australia understand complex medical cases by transforming hundreds or thousands of pages of medical documentation into clear, organized narratives that highlight the most important medical facts.
+                    Expert medical opinion services provide attorneys with independent, professional medical analysis and opinions on the medical aspects of their legal cases. Our expert medical opinion services connect law firms and attorneys in USA, Canada, and Australia with qualified medical professionals who review case materials and provide objective, evidence-based opinions on causation, standard of care, prognosis, disability, treatment necessity, and other medical-legal issues.
                   </p>
                   <p>
-                    Unlike a chronology which presents information in date order, a narrative summary organizes medical information by body system, condition, or treatment category, providing context and explaining the relationships between different medical events. This format is particularly valuable for complex cases involving multiple injuries, chronic conditions, or long treatment histories where understanding the overall medical picture is more important than tracking every individual event.
+                    Medical expert opinions are critical in many types of litigation including medical malpractice cases, personal injury claims, workers' compensation disputes, disability claims, product liability cases, and wrongful death actions. Unlike treating physicians who focus on patient care, medical experts provide objective analysis specifically for legal purposes, examining whether care met accepted standards, whether injuries were caused by alleged incidents, and whether future medical care will be necessary.
                   </p>
                   <p>
-                    Our experienced medical professionals analyze all relevant records and create summaries that include patient demographics, presenting complaints, diagnostic findings, treatment courses, surgical procedures, medication histories, and clinical outcomes. Each summary is written in clear language that bridges medical terminology and legal understanding, making it accessible to attorneys, paralegals, and other legal professionals while maintaining medical accuracy.
+                    Our process begins with carefully matching your case to an appropriate medical expert based on specialty, credentials, and experience. The expert reviews all relevant medical records, imaging studies, laboratory results, and other case materials. They then prepare a detailed written opinion addressing the specific medical-legal questions posed by your case, supported by medical literature and professional standards. Our experts are experienced in providing opinions that withstand scrutiny and can serve as the foundation for strong legal arguments.
                   </p>
                   <p>
-                    Narrative summaries are essential tools for case evaluation, demand package preparation, settlement negotiations, and trial preparation. They enable attorneys to quickly grasp the medical aspects of their cases, identify strengths and weaknesses, and communicate medical issues effectively to clients, opposing counsel, and juries. We serve legal professionals across USA, Canada, and Australia with tailored summaries that meet the specific needs of each jurisdiction.
+                    We work with board-certified physicians and medical professionals across all specialties who understand the legal process and can communicate complex medical concepts clearly to legal professionals, juries, and judges. Our experts are available for depositions and trial testimony when needed. Whether you need an opinion to evaluate case merit, support settlement negotiations, or present at trial, we provide credible, defensible medical opinions that strengthen your case across USA, Canada, and Australia.
                   </p>
                 </div>
               </div>
@@ -62,9 +62,9 @@ export default function NarrativeSummary() {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                     <Clock className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-semibold mb-2">Quick Delivery</h3>
+                  <h3 className="font-semibold mb-2">Timely Review</h3>
                   <p className="text-sm text-muted-foreground">
-                    Fast turnaround times to meet your deadlines
+                    Efficient expert matching and opinion delivery
                   </p>
                 </div>
 
@@ -72,9 +72,9 @@ export default function NarrativeSummary() {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                     <CheckCircle className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-semibold mb-2">Clear Language</h3>
+                  <h3 className="font-semibold mb-2">Qualified Experts</h3>
                   <p className="text-sm text-muted-foreground">
-                    Medical terminology explained in understandable terms
+                    Board-certified physicians across all specialties
                   </p>
                 </div>
 
@@ -82,9 +82,9 @@ export default function NarrativeSummary() {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                     <FileText className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-semibold mb-2">Organized Format</h3>
+                  <h3 className="font-semibold mb-2">Detailed Reports</h3>
                   <p className="text-sm text-muted-foreground">
-                    Logically structured by body system or condition
+                    Comprehensive written opinions with supporting evidence
                   </p>
                 </div>
               </div>

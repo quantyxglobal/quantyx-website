@@ -16,6 +16,10 @@ export default defineConfig(() => ({
       dynamicRoutes: [
         '/',
         '/services',
+        '/services/medical-chronology',
+        '/services/narrative-summary',
+        '/services/demand-letters',
+        '/services/medical-opinion',
         '/pricing',
         '/about',
         '/case-upload',

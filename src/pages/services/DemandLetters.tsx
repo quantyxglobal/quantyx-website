@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import { FileText, Clock, CheckCircle, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function NarrativeSummary() {
+export default function DemandLetters() {
   return (
     <>
       <Helmet>
-        <title>Narrative Summary Services for Attorneys USA, Canada & Australia | Quantyx Global</title>
+        <title>Demand Letter Services for Law Firms USA, Canada & Australia | Quantyx Global</title>
         <meta 
           name="description" 
-          content="Professional narrative summary services for attorneys and law firms in USA, Canada, and Australia. Transform medical records into clear, concise narrative summaries." 
+          content="Professional demand letter services for law firms and attorneys in USA, Canada, and Australia. Expert demand package preparation for personal injury cases." 
         />
       </Helmet>
 
@@ -25,10 +25,10 @@ export default function NarrativeSummary() {
                 Core Service
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-                Narrative Summary Services
+                Demand Letter Services
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Clear, comprehensive medical record summaries for attorneys in USA, Canada, and Australia
+                Comprehensive demand package preparation for law firms in USA, Canada, and Australia
               </p>
             </div>
           </div>
@@ -39,19 +39,19 @@ export default function NarrativeSummary() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="bg-card rounded-2xl shadow-elegant p-8 md:p-12 mb-8">
-                <h2 className="text-2xl font-bold mb-6">What is a Narrative Summary?</h2>
+                <h2 className="text-2xl font-bold mb-6">What are Demand Letter Services?</h2>
                 <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
                   <p>
-                    A narrative summary is a concise, readable document that synthesizes voluminous medical records into a coherent story of the patient's medical journey. Our narrative summary services help attorneys in USA, Canada, and Australia understand complex medical cases by transforming hundreds or thousands of pages of medical documentation into clear, organized narratives that highlight the most important medical facts.
+                    Demand letter services involve the preparation of comprehensive settlement demand packages that present your client's case to insurance companies or opposing parties. Our professional demand letter services help law firms and attorneys in USA, Canada, and Australia create persuasive, well-documented demand packages that maximize settlement opportunities and demonstrate the full value of their clients' claims.
                   </p>
                   <p>
-                    Unlike a chronology which presents information in date order, a narrative summary organizes medical information by body system, condition, or treatment category, providing context and explaining the relationships between different medical events. This format is particularly valuable for complex cases involving multiple injuries, chronic conditions, or long treatment histories where understanding the overall medical picture is more important than tracking every individual event.
+                    A properly prepared demand letter is much more than a simple request for compensation—it is a strategic document that tells your client's story, establishes liability, documents injuries and treatment, demonstrates the impact on your client's life, and justifies the settlement amount requested. Our experienced team works with your firm to compile all relevant medical records, bills, reports, and supporting documentation into a cohesive package that presents a compelling case for settlement.
                   </p>
                   <p>
-                    Our experienced medical professionals analyze all relevant records and create summaries that include patient demographics, presenting complaints, diagnostic findings, treatment courses, surgical procedures, medication histories, and clinical outcomes. Each summary is written in clear language that bridges medical terminology and legal understanding, making it accessible to attorneys, paralegals, and other legal professionals while maintaining medical accuracy.
+                    Our demand package services include organizing and indexing all medical records chronologically, preparing medical summaries that highlight key injuries and treatment, calculating and itemizing special damages including medical expenses and lost wages, summarizing pain and suffering and loss of enjoyment of life, and assembling all supporting documentation such as police reports, witness statements, photographs, and expert reports. Each package is professionally formatted and organized for maximum impact.
                   </p>
                   <p>
-                    Narrative summaries are essential tools for case evaluation, demand package preparation, settlement negotiations, and trial preparation. They enable attorneys to quickly grasp the medical aspects of their cases, identify strengths and weaknesses, and communicate medical issues effectively to clients, opposing counsel, and juries. We serve legal professionals across USA, Canada, and Australia with tailored summaries that meet the specific needs of each jurisdiction.
+                    We understand that effective demand letters must be tailored to the specific jurisdiction and case type. Our team has experience preparing demand packages for personal injury cases, motor vehicle accidents, slip and fall incidents, medical malpractice claims, product liability cases, and wrongful death claims across USA, Canada, and Australia. We work closely with attorneys to ensure each demand package aligns with case strategy and presents the strongest possible argument for settlement.
                   </p>
                 </div>
               </div>
@@ -62,9 +62,9 @@ export default function NarrativeSummary() {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                     <Clock className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-semibold mb-2">Quick Delivery</h3>
+                  <h3 className="font-semibold mb-2">Efficient Process</h3>
                   <p className="text-sm text-muted-foreground">
-                    Fast turnaround times to meet your deadlines
+                    Streamlined workflow for timely demand delivery
                   </p>
                 </div>
 
@@ -72,9 +72,9 @@ export default function NarrativeSummary() {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                     <CheckCircle className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-semibold mb-2">Clear Language</h3>
+                  <h3 className="font-semibold mb-2">Comprehensive</h3>
                   <p className="text-sm text-muted-foreground">
-                    Medical terminology explained in understandable terms
+                    Complete packages with all supporting documentation
                   </p>
                 </div>
 
@@ -82,9 +82,9 @@ export default function NarrativeSummary() {
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                     <FileText className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="font-semibold mb-2">Organized Format</h3>
+                  <h3 className="font-semibold mb-2">Persuasive Format</h3>
                   <p className="text-sm text-muted-foreground">
-                    Logically structured by body system or condition
+                    Professionally organized for maximum settlement impact
                   </p>
                 </div>
               </div>

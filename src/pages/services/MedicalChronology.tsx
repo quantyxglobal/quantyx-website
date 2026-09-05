@@ -1,270 +1,119 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { FileText, Clock, CheckCircle, ArrowRight, Download, Eye } from "lucide-react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { FileText, Clock, CheckCircle, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const MedicalChronology = () => {
-  const features = [
-    "Chronological organization of all medical records",
-    "Key event identification and highlighting",
-    "Medical terminology translation",
-    "Timeline visualization",
-    "Cross-referencing of treatments",
-    "Digital bookmarking and hyperlinks",
-    "Summary of significant findings",
-    "Court-ready formatting"
-  ];
-
-  const process = [
-    {
-      step: 1,
-      title: "Record Collection",
-      description: "Secure upload of all medical records and documentation"
-    },
-    {
-      step: 2,
-      title: "AI Analysis",
-      description: "Advanced AI processing to identify key events and patterns"
-    },
-    {
-      step: 3,
-      title: "Expert Review",
-      description: "Medical professionals review and validate the chronology"
-    },
-    {
-      step: 4,
-      title: "Final Delivery",
-      description: "Comprehensive chronology delivered in multiple formats"
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <Clock className="w-8 h-8" />,
-      title: "Time Savings",
-      description: "Reduce case preparation time by up to 70% with organized medical timelines"
-    },
-    {
-      icon: <Eye className="w-8 h-8" />,
-      title: "Clear Visualization",
-      description: "Easy-to-follow chronological format helps identify case strengths"
-    },
-    {
-      icon: <FileText className="w-8 h-8" />,
-      title: "Comprehensive Coverage",
-      description: "All medical events captured and organized systematically"
-    }
-  ];
-
+export default function MedicalChronology() {
   return (
-    <div className="min-h-screen">
-      <SEO
-        title="Medical Chronology Services | Expert Medical Record Organization - Quantyx Global"
-        description="Professional medical chronology services for personal injury cases. Transform complex medical records into clear, chronological timelines. Expert analysis, court-ready formatting, 24-48 hour turnaround."
-        keywords="medical chronology, medical record organization, personal injury chronology, medical timeline, legal medical records, court-ready chronology, medical record review"
-        canonical="https://www.quantyxg.com/services"
-        ogTitle="Medical Chronology Services for Personal Injury Cases"
-        ogDescription="Expert medical chronologies that strengthen your personal injury cases. Clear timelines, professional analysis, fast turnaround."
-        noindex={true}
-      />
-      <Header />
-      <main className="pt-20">
+    <>
+      <Helmet>
+        <title>Medical Chronology Services for Law Firms USA, Canada & Australia | Quantyx Global</title>
+        <meta 
+          name="description" 
+          content="Professional medical chronology services for law firms and attorneys in USA, Canada, and Australia. Expert medical record organization and timeline creation for legal cases." 
+        />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-background via-secondary/30 to-muted/50">
         {/* Hero Section */}
-        <section className="py-20 relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse" />
-            <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-accent/15 rounded-full blur-3xl animate-pulse" />
-          </div>
-          <div className="container mx-auto px-6 relative z-10">
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+          <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-              <div className="w-20 h-20 rounded-2xl flex items-center justify-center mb-8 mx-auto text-white shadow-lg" style={{ background: 'var(--gradient-primary)' }}>
-                <FileText className="w-10 h-10" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
+                <FileText className="h-4 w-4" />
+                Core Service
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
-                  Medical Chronology
-                </span>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+                Medical Chronology Services
               </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                Transform complex medical records into clear, chronological timelines that strengthen your personal injury cases.
+              <p className="text-xl text-muted-foreground mb-8">
+                Comprehensive medical record organization for law firms and attorneys in USA, Canada, and Australia
               </p>
-              
-              {/* Image Placeholder */}
-              <div className="max-w-4xl mx-auto mb-8">
-                <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-primary/20">
-                  <div className="bg-muted/50 rounded-xl h-64 flex items-center justify-center">
-                    <div className="text-center">
-                      <FileText className="w-16 h-16 text-primary mx-auto mb-4" />
-                      <p className="text-muted-foreground font-semibold">Medical Chronology Timeline</p>
-                      <p className="text-sm text-muted-foreground mt-2">[Placeholder for chronological timeline visualization]</p>
-                    </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Main Content */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-card rounded-2xl shadow-elegant p-8 md:p-12 mb-8">
+                <h2 className="text-2xl font-bold mb-6">What is Medical Chronology?</h2>
+                <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+                  <p>
+                    A medical chronology is a detailed, chronologically organized summary of a patient's medical history extracted from medical records. Our professional medical chronology services help law firms and attorneys in USA, Canada, and Australia quickly understand the medical aspects of their cases by transforming complex medical records into clear, organized timelines.
+                  </p>
+                  <p>
+                    Medical chronologies are essential tools for personal injury cases, medical malpractice litigation, workers' compensation claims, and disability cases. By organizing medical events in sequential order with page references to source documents, we enable attorneys to identify critical medical facts, treatment patterns, and gaps in care that may be crucial to case strategy.
+                  </p>
+                  <p>
+                    Our experienced medical professionals review all medical records—including hospital records, physician notes, laboratory results, imaging reports, and pharmacy records—and extract relevant information into a comprehensive chronological format. Each entry includes the date of service, treating provider, medical facility, type of treatment or test, and key findings or diagnoses with precise page citations.
+                  </p>
+                  <p>
+                    This systematic approach saves attorneys countless hours of manual review and ensures no critical medical details are overlooked. Our chronologies are formatted for easy reference during depositions, mediations, and trials, making them invaluable tools for case preparation and presentation. We serve law firms across USA, Canada, and Australia with consistent quality and attention to detail.
+                  </p>
+                </div>
+              </div>
+
+              {/* Features Grid */}
+              <div className="grid md:grid-cols-3 gap-6 mb-12">
+                <div className="bg-card rounded-xl p-6 shadow-card">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <Clock className="h-6 w-6 text-primary" />
                   </div>
+                  <h3 className="font-semibold mb-2">Fast Turnaround</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Quick delivery without compromising accuracy or quality
+                  </p>
+                </div>
+
+                <div className="bg-card rounded-xl p-6 shadow-card">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <CheckCircle className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold mb-2">Expert Review</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Reviewed by experienced medical professionals
+                  </p>
+                </div>
+
+                <div className="bg-card rounded-xl p-6 shadow-card">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <FileText className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold mb-2">Detailed Citations</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Precise page references to source documents
+                  </p>
                 </div>
               </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/consultation">
-                  <Button size="xl" className="shadow-lg">
-                    Get Started
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
-                </Link>
-                <Button variant="outline" size="xl">
-                  <Download className="w-5 h-5 mr-2" />
-                  Sample Report
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold mb-6">What's Included</h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Our medical chronology service provides comprehensive organization and analysis of medical records.
+              {/* CTA Section */}
+              <div className="bg-gradient-to-r from-primary to-primary-glow rounded-2xl p-8 md:p-12 text-center text-primary-foreground">
+                <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+                <p className="text-lg mb-8 opacity-90">
+                  Upload your case files today or request a custom quote
                 </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-8 mb-16">
-                <div>
-                  <h3 className="text-2xl font-bold mb-6">Key Features</h3>
-                  <ul className="space-y-4">
-                    {features.map((feature, index) => (
-                      <li key={index} className="flex items-start">
-                        <CheckCircle className="w-6 h-6 text-primary mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-muted-foreground">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link to="/case-upload">
+                    <Button size="lg" variant="secondary" className="gap-2 w-full sm:w-auto">
+                      Upload Case Files
+                      <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                  <Link to="/quote">
+                    <Button size="lg" variant="outline" className="gap-2 w-full sm:w-auto border-primary-foreground text-primary-foreground hover:bg-primary-foreground/10">
+                      Request Quote
+                      <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
-                
-                <Card className="border-primary/20 bg-card/80 backdrop-blur-sm shadow-xl">
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Pricing</CardTitle>
-                    <CardDescription>Transparent, competitive pricing</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="text-4xl font-bold text-primary mb-4">$2.50<span className="text-lg text-muted-foreground">/page</span></div>
-                    <ul className="space-y-3 mb-6">
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-primary mr-3" />
-                        24-48 hour turnaround
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-primary mr-3" />
-                        Expert medical review
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-primary mr-3" />
-                        Multiple format delivery
-                      </li>
-                      <li className="flex items-center text-sm">
-                        <CheckCircle className="w-4 h-4 text-primary mr-3" />
-                        Unlimited revisions
-                      </li>
-                    </ul>
-                    <Link to="/consultation">
-                      <Button className="w-full">Get Quote</Button>
-                    </Link>
-                  </CardContent>
-                </Card>
               </div>
             </div>
           </div>
         </section>
-
-        {/* Process Section */}
-        <section className="py-20 bg-primary/5">
-          <div className="container mx-auto px-6">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold mb-6">Our Process</h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  From record collection to final delivery, we ensure accuracy and efficiency at every step.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-4 gap-8">
-                {process.map((item, index) => (
-                  <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-primary/20 bg-card/80 backdrop-blur-sm">
-                    <CardContent className="p-8">
-                      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-primary-glow flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
-                        {item.step}
-                      </div>
-                      <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {item.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold mb-6">Why Choose Our Medical Chronology Service</h2>
-                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                  Experience the advantages of AI-powered medical record organization.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-3 gap-8">
-                {benefits.map((benefit, index) => (
-                  <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 border-primary/20 bg-card/80 backdrop-blur-sm">
-                    <CardContent className="p-8">
-                      <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 mx-auto text-white shadow-lg" style={{ background: index % 2 === 0 ? 'var(--gradient-primary)' : 'var(--gradient-accent)' }}>
-                        {benefit.icon}
-                      </div>
-                      <h3 className="text-xl font-semibold mb-4">{benefit.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed">
-                        {benefit.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-primary/5">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Streamline Your Case Preparation?</h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Let our experts create a comprehensive medical chronology for your personal injury case.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/consultation">
-                <Button size="xl" className="shadow-lg">
-                  Schedule Consultation
-                </Button>
-              </Link>
-              <Link to="/case-upload">
-                <Button variant="outline" size="xl">
-                  Contact Us
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
+      </div>
+    </>
   );
-};
-
-export default MedicalChronology;
+}
